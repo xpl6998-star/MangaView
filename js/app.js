@@ -1,8 +1,8 @@
 /**
- * MangaView - Main Application (Shikimori API Version)
+ * MangaView - Main Application (Jikan/MyAnimeList API Version)
  */
 
-import { anime, manga, genre, getImageUrl, getCoverUrl, formatDate, formatRelativeDate, getKindClass, getStatusClass, getScoreClass } from './api/shikimori.js';
+import { anime, manga, genre, getImageUrl, getPosterUrl, formatDate, getKindClass, getStatusClass, getScoreClass } from './api/jikan.js';
 
 // ============ Initialize App ============
 function init() {
@@ -36,7 +36,6 @@ function renderHeader() {
     </div>
   `;
 
-  // Search input handler
   const searchInput = header.querySelector('#header-search-input');
   searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
@@ -48,19 +47,29 @@ function renderHeader() {
   });
 }
 
-// ============ Genres State ============
+// ============ State ============
 let allGenres = [];
 let cachedGenres = false;
 
 async function loadGenres() {
   if (cachedGenres) return;
   try {
-    const genres = await genre.list();
-    allGenres = genres || [];
+    const data = await genre.list();
+    allGenres = data.data || [];
     cachedGenres = true;
+    updateGenresCloud();
   } catch (error) {
     console.error('Failed to load genres:', error);
   }
+}
+
+function updateGenresCloud() {
+  const container = document.getElementById('genres-cloud');
+  if (!container || allGenres.length === 0) return;
+
+  container.innerHTML = allGenres.slice(0, 16).map(g => `
+    <a href="#/search?genre=${g.mal_id}" class="filter-tag">${g.name}</a>
+  `).join('');
 }
 
 // ============ Home Page ============
@@ -79,7 +88,7 @@ async function renderHome() {
           <div class="hero__text">
             <span class="hero__subtitle">Welcome to MangaView</span>
             <h1 class="hero__title">Discover Your Next Favorite Anime</h1>
-            <p class="hero__description">Browse thousands of anime and manga titles from Shikimori. Track your watching progress and find new series to explore.</p>
+            <p class="hero__description">Browse thousands of anime and manga titles. Track your watching progress and find new series to explore.</p>
             <a href="#/search" class="hero__cta">
               <span>Explore Now</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -94,7 +103,7 @@ async function renderHome() {
         <div class="container">
           <div class="section__header">
             <h2 class="section__title">Top Rated Anime</h2>
-            <a href="#/search?type=anime&order=ranked" class="section__link">
+            <a href="#/search?type=anime&order=score" class="section__link">
               View All
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -111,7 +120,7 @@ async function renderHome() {
         <div class="container">
           <div class="section__header">
             <h2 class="section__title">Top Manga</h2>
-            <a href="#/search?type=manga&order=ranked" class="section__link">
+            <a href="#/search?type=manga&order=score" class="section__link">
               View All
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -137,10 +146,8 @@ async function renderHome() {
     </div>
   `;
 
-  // Load data
   loadTopAnime();
   loadTopManga();
-  loadGenresCloud();
 }
 
 async function loadTopAnime() {
@@ -148,9 +155,10 @@ async function loadTopAnime() {
   if (!container) return;
 
   try {
-    const data = await anime.list({ order: 'ranked', limit: 8 });
-    container.innerHTML = data.length > 0
-      ? data.map(item => renderAnimeCard(item, 'anime')).join('')
+    const data = await anime.list({ limit: 8 });
+    const list = data.data || [];
+    container.innerHTML = list.length > 0
+      ? list.map(item => renderAnimeCard(item, 'anime')).join('')
       : '<p style="padding: 20px; color: var(--text-muted);">No anime found</p>';
     attachCardListeners(container);
   } catch (error) {
@@ -164,9 +172,10 @@ async function loadTopManga() {
   if (!container) return;
 
   try {
-    const data = await manga.list({ order: 'ranked', limit: 8 });
-    container.innerHTML = data.length > 0
-      ? data.map(item => renderAnimeCard(item, 'manga')).join('')
+    const data = await manga.list({ limit: 8 });
+    const list = data.data || [];
+    container.innerHTML = list.length > 0
+      ? list.map(item => renderAnimeCard(item, 'manga')).join('')
       : '<p style="padding: 20px; color: var(--text-muted);">No manga found</p>';
     attachCardListeners(container);
   } catch (error) {
@@ -175,38 +184,30 @@ async function loadTopManga() {
   }
 }
 
-function loadGenresCloud() {
-  const container = document.getElementById('genres-cloud');
-  if (!container || allGenres.length === 0) return;
-
-  // Filter anime genres
-  const animeGenres = allGenres.filter(g => g.kind === 'genre' && g.entry_type === 'Anime').slice(0, 20);
-  container.innerHTML = animeGenres.map(genre => `
-    <a href="#/search?genre=${genre.id}" class="filter-tag">${genre.name}</a>
-  `).join('');
-}
-
 // ============ Card Renderer ============
 function renderAnimeCard(item, type = 'anime') {
-  const title = item.name || 'Unknown Title';
-  const score = item.score && item.score !== '0.0' ? item.score : '';
-  const imageUrl = getImageUrl(item.image, 'preview') || getImageUrl(item.image, 'x96');
+  const title = item.title || item.title_english || 'Unknown';
+  const score = item.score ? item.score.toFixed(2) : '';
+  const imageUrl = getPosterUrl(item.images) || getImageUrl(item.images);
+  const kind = item.type || '';
+  const episodes = item.episodes || 0;
+  const status = item.status || '';
 
   return `
-    <article class="manga-card" data-id="${item.id}" data-type="${type}">
+    <article class="manga-card" data-id="${item.mal_id}" data-type="${type}">
       <div class="manga-card__cover">
         <img src="${imageUrl}" alt="${title}" loading="lazy"
              onerror="this.parentElement.style.background='linear-gradient(135deg, var(--color-primary-dark), var(--color-secondary))'"
              class="manga-card__cover-img">
         <div class="manga-card__cover-overlay"></div>
-        ${item.kind ? `<span class="manga-card__status ${getKindClass(item.kind)}">${item.kind}</span>` : ''}
+        ${kind ? `<span class="manga-card__status ${getKindClass(kind)}">${kind}</span>` : ''}
         ${score ? `<span class="manga-card__rating ${getScoreClass(score)}">★ ${score}</span>` : ''}
       </div>
       <div class="manga-card__info">
         <h3 class="manga-card__title">${title}</h3>
         <div class="manga-card__meta">
-          ${item.status ? `<span class="manga-card__tag">${item.status}</span>` : ''}
-          ${item.episodes ? `<span class="manga-card__tag">${item.episodes} eps</span>` : ''}
+          ${status ? `<span class="manga-card__tag">${status.replace(' Airing', '')}</span>` : ''}
+          ${episodes ? `<span class="manga-card__tag">${episodes} eps</span>` : ''}
           ${item.volumes ? `<span class="manga-card__tag">${item.volumes} vol</span>` : ''}
         </div>
       </div>
@@ -232,10 +233,7 @@ async function renderSearch() {
   const params = new URLSearchParams(window.location.hash.split('?')[1] || '');
   const query = params.get('q') || '';
   const type = params.get('type') || 'anime';
-  const kind = params.get('kind') || '';
-  const status = params.get('status') || '';
   const genreId = params.get('genre') || '';
-  const order = params.get('order') || 'ranked';
   const page = parseInt(params.get('page') || '1');
 
   app.innerHTML = `
@@ -264,31 +262,11 @@ async function renderSearch() {
             </select>
           </div>
           <div class="filter-group">
-            <label class="filter-label">Status</label>
-            <select class="filter-select" id="filter-status">
-              <option value="">All</option>
-              <option value="ongoing" ${status === 'ongoing' ? 'selected' : ''}>Ongoing</option>
-              <option value="released" ${status === 'released' ? 'selected' : ''}>Released</option>
-              <option value="anons" ${status === 'anons' ? 'selected' : ''}>Anons</option>
-              <option value="paused" ${status === 'paused' ? 'selected' : ''}>Paused</option>
-              <option value="discontinued" ${status === 'discontinued' ? 'selected' : ''}>Discontinued</option>
-            </select>
-          </div>
-          <div class="filter-group">
-            <label class="filter-label">Order</label>
-            <select class="filter-select" id="filter-order">
-              <option value="ranked" ${order === 'ranked' ? 'selected' : ''}>Ranked</option>
-              <option value="popularity" ${order === 'popularity' ? 'selected' : ''}>Popularity</option>
-              <option value="aired_on" ${order === 'aired_on' ? 'selected' : ''}>Date</option>
-              <option value="name" ${order === 'name' ? 'selected' : ''}>Name</option>
-            </select>
-          </div>
-          <div class="filter-group" style="flex: 1;">
             <label class="filter-label">Genre</label>
             <select class="filter-select" id="filter-genre">
               <option value="">All Genres</option>
-              ${allGenres.filter(g => g.kind === 'genre' && g.entry_type === type).map(g =>
-                `<option value="${g.id}" ${genreId === String(g.id) ? 'selected' : ''}>${g.name}</option>`
+              ${allGenres.map(g =>
+                `<option value="${g.mal_id}" ${genreId === String(g.mal_id) ? 'selected' : ''}>${g.name}</option>`
               ).join('')}
             </select>
           </div>
@@ -304,29 +282,23 @@ async function renderSearch() {
   `;
 
   setupSearchHandlers();
-  performSearch(query, type, kind, status, genreId, order, page);
+  performSearch(query, type, genreId, page);
 }
 
 function setupSearchHandlers() {
   const searchInput = document.getElementById('search-input');
   const searchBtn = document.getElementById('search-btn');
   const filterType = document.getElementById('filter-type');
-  const filterStatus = document.getElementById('filter-status');
-  const filterOrder = document.getElementById('filter-order');
   const filterGenre = document.getElementById('filter-genre');
 
   const updateURL = () => {
     const q = searchInput.value.trim();
     const t = filterType.value;
-    const s = filterStatus.value;
-    const o = filterOrder.value;
     const g = filterGenre.value;
 
     const params = new URLSearchParams();
     if (q) params.set('q', q);
     params.set('type', t);
-    if (s) params.set('status', s);
-    if (o !== 'ranked') params.set('order', o);
     if (g) params.set('genre', g);
     params.delete('page');
 
@@ -338,12 +310,12 @@ function setupSearchHandlers() {
     if (e.key === 'Enter') updateURL();
   });
 
-  [filterType, filterStatus, filterOrder, filterGenre].forEach(el => {
+  [filterType, filterGenre].forEach(el => {
     el.addEventListener('change', updateURL);
   });
 }
 
-async function performSearch(query, type, kind, status, genreId, order, page) {
+async function performSearch(query, type, genreId, page) {
   const container = document.getElementById('search-results');
   const pagination = document.getElementById('search-pagination');
   if (!container) return;
@@ -351,29 +323,22 @@ async function performSearch(query, type, kind, status, genreId, order, page) {
   try {
     const limit = 24;
     const api = type === 'manga' ? manga : anime;
-    const params = {
-      page,
-      limit,
-      order: order || 'ranked',
-    };
-    if (query) params.search = query;
-    if (status) params.status = status;
+    const params = { page, limit };
+    if (query) params.q = query;
     if (genreId) params.genre = genreId;
 
     const data = await api.list(params);
+    const list = data.data || [];
 
-    container.innerHTML = data.length > 0
-      ? data.map(item => renderAnimeCard(item, type)).join('')
+    container.innerHTML = list.length > 0
+      ? list.map(item => renderAnimeCard(item, type)).join('')
       : '<p style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">No results found.</p>';
 
     attachCardListeners(container);
 
-    // Simple pagination
-    if (data.length >= limit) {
-      const nextPage = page + 1;
-      pagination.innerHTML = `
-        <button class="btn btn--secondary" onclick="window.app.goToPage(${nextPage})">Load More</button>
-      `;
+    // Pagination
+    if (data.pagination?.has_next_page) {
+      pagination.innerHTML = `<button class="btn btn--secondary" onclick="window.app.goToPage(${page + 1})">Load More</button>`;
     }
   } catch (error) {
     console.error('Search failed:', error);
@@ -399,111 +364,67 @@ async function renderMangaDetail(id) {
     </div>
   `;
 
-  // Try anime first, then manga
   try {
-    const animeData = await anime.get(id);
-    renderDetail(animeData, 'anime');
-  } catch {
-    try {
-      const mangaData = await manga.get(id);
-      renderDetail(mangaData, 'manga');
-    } catch (error) {
-      console.error('Failed to load details:', error);
-      document.getElementById('manga-detail').innerHTML = `
-        <div style="text-align: center; padding: 60px;">
-          <h2>Failed to load details</h2>
-          <p style="color: var(--text-muted);">Please try again later.</p>
-          <a href="#/" class="btn btn--primary" style="margin-top: 20px;">Go Home</a>
-        </div>
-      `;
-    }
+    const api = anime;
+    const data = await api.get(id);
+    renderDetail(data.data);
+  } catch (error) {
+    console.error('Failed to load details:', error);
+    document.getElementById('manga-detail').innerHTML = `
+      <div style="text-align: center; padding: 60px;">
+        <h2>Failed to load details</h2>
+        <p style="color: var(--text-muted);">Please try again later.</p>
+        <a href="#/" class="btn btn--primary" style="margin-top: 20px;">Go Home</a>
+      </div>
+    `;
   }
 }
 
-function renderDetail(data, type) {
+function renderDetail(data) {
   const container = document.getElementById('manga-detail');
   if (!container) return;
 
-  const title = data.name || 'Unknown';
-  const imageUrl = getImageUrl(data.image, 'original') || getImageUrl(data.image, 'preview');
-  const score = data.score && data.score !== '0.0' ? data.score : 'N/A';
+  const title = data.title || data.title_english || 'Unknown';
+  const imageUrl = getImageUrl(data.images);
+  const score = data.score ? data.score.toFixed(2) : 'N/A';
   const status = data.status || '';
-  const kind = data.kind || '';
+  const type = data.type || '';
   const episodes = data.episodes || 0;
-  const airedOn = data.aired_on || '';
-  const releasedOn = data.released_on || '';
-  const description = data.description || '';
-  const url = data.url || '';
+  const synopsis = data.synopsis || '';
+  const aired = data.aired?.string || '';
 
   container.innerHTML = `
     <div class="manga-detail__header">
       <div class="manga-detail__cover">
-        <img src="${imageUrl}" alt="${title}"
-             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 3 4%22%3E%3Crect fill=%22%2325253A%22 width=%223%22 height=%224%22/%3E%3C/svg%3E'">
+        <img src="${imageUrl}" alt="${title}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 3 4%22%3E%3Crect fill=%22%2325253A%22 width=%223%22 height=%224%22/%3E%3C/svg%3E'">
       </div>
       <div class="manga-detail__info">
         <h1 class="manga-detail__title">${title}</h1>
         <div class="manga-detail__meta">
           ${score !== 'N/A' ? `<span class="manga-detail__score">★ ${score}</span>` : ''}
-          ${kind ? `<span class="manga-detail__kind">${kind}</span>` : ''}
+          ${type ? `<span class="manga-detail__kind">${type}</span>` : ''}
           ${status ? `<span class="manga-detail__status ${getStatusClass(status)}">${status}</span>` : ''}
         </div>
         <div class="manga-detail__stats">
           ${episodes ? `<div class="manga-detail__stat"><span class="label">Episodes:</span> ${episodes}</div>` : ''}
           ${data.volumes ? `<div class="manga-detail__stat"><span class="label">Volumes:</span> ${data.volumes}</div>` : ''}
           ${data.chapters ? `<div class="manga-detail__stat"><span class="label">Chapters:</span> ${data.chapters}</div>` : ''}
-          ${airedOn ? `<div class="manga-detail__stat"><span class="label">Aired:</span> ${formatDate(airedOn)}</div>` : ''}
-          ${releasedOn ? `<div class="manga-detail__stat"><span class="label">Released:</span> ${formatDate(releasedOn)}</div>` : ''}
+          ${aired ? `<div class="manga-detail__stat"><span class="label">Aired:</span> ${aired}</div>` : ''}
+          ${data.duration ? `<div class="manga-detail__stat"><span class="label">Duration:</span> ${data.duration}</div>` : ''}
+          ${data.rating ? `<div class="manga-detail__stat"><span class="label">Rating:</span> ${data.rating}</div>` : ''}
         </div>
         <div class="manga-detail__actions">
           <button class="btn btn--primary" id="add-to-library-btn">Add to Library</button>
         </div>
       </div>
     </div>
-    ${description ? `
+    ${synopsis ? `
     <div class="manga-detail__description">
       <h3>Synopsis</h3>
-      <p>${description.replace(/\n/g, '<br>')}</p>
+      <p>${synopsis.replace(/\n/g, '<br>')}</p>
     </div>
     ` : ''}
-    <div class="manga-detail__characters">
-      <h3>Characters</h3>
-      <div id="characters-list" class="characters-grid">
-        <span style="color: var(--text-muted);">Loading...</span>
-      </div>
-    </div>
   `;
-
-  // Load characters
-  loadCharacters(id, type);
-}
-
-async function loadCharacters(id, type) {
-  const container = document.getElementById('characters-list');
-  if (!container) return;
-
-  try {
-    const api = type === 'manga' ? manga : anime;
-    const characters = await api.characters(id);
-    if (characters && characters.length > 0) {
-      container.innerHTML = characters.slice(0, 8).map(char => {
-        const name = char.name || 'Unknown';
-        const image = char.image ? getImageUrl(char.image, 'x96') : '';
-        const role = char.role || '';
-        return `
-          <div class="character-card">
-            <img src="${image}" alt="${name}" onerror="this.style.display='none'">
-            <span class="character-name">${name}</span>
-            <span class="character-role">${role}</span>
-          </div>
-        `;
-      }).join('');
-    } else {
-      container.innerHTML = '<span style="color: var(--text-muted);">No characters found</span>';
-    }
-  } catch (error) {
-    container.innerHTML = '<span style="color: var(--text-muted);">Failed to load characters</span>';
-  }
 }
 
 // ============ Library Page ============
@@ -523,7 +444,7 @@ async function renderLibrary() {
   `;
 }
 
-// ============ Chapter Reader (Not supported in Shikimori) ============
+// ============ Chapter Reader ============
 async function renderChapterReader(id) {
   const app = document.getElementById('app');
   if (!app) return;
@@ -532,7 +453,7 @@ async function renderChapterReader(id) {
     <div class="page page-enter">
       <div class="container" style="text-align: center; padding: 60px 0;">
         <h2>Chapter Reader</h2>
-        <p style="color: var(--text-muted); margin-top: 10px;">Shikimori API does not provide chapter content. Please use the detail page to view anime/manga information.</p>
+        <p style="color: var(--text-muted); margin-top: 10px;">Jikan API does not provide chapter content. Please view anime details for more information.</p>
         <a href="#/" class="btn btn--primary" style="margin-top: 20px;">Go Home</a>
       </div>
     </div>
@@ -546,18 +467,11 @@ function goToPage(page) {
   router.navigate(`/search?${params.toString()}`);
 }
 
-// Export for use in onclick
 window.app = { goToPage };
-
-// Make functions globally accessible for onclick handlers
-window.renderAnimeCard = renderAnimeCard;
-window.attachCardListeners = attachCardListeners;
 
 // ============ Router Integration ============
 import router from './router.js';
 
-// Initialize on load
 init();
 
-// ============ Render Functions Export ============
 export { renderHome, renderSearch, renderMangaDetail, renderLibrary, renderChapterReader };
