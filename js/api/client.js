@@ -6,9 +6,9 @@
 const API_BASE = 'https://api.mangadex.org';
 const USER_AGENT = 'MangaView/1.0.0 (Anime Website; +https://github.com/mangadex-fans/mangaview)';
 
-// 图片代理地址 - 部署 Cloudflare Worker 后替换为你的 Worker URL
-// 如果不设置代理，图片将使用渐变占位符显示
-const IMAGE_PROXY_BASE = 'https://mangadex.yc4461.workers.dev';
+// 图片代理地址 - 使用 CORS 代理
+// Cloudflare Worker 有问题，暂时用 corsproxy.io
+const IMAGE_PROXY_BASE = 'https://corsproxy.io/?';
 
 // Rate limiter: 5 requests per second globally
 class RateLimiter {
