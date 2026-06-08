@@ -6,9 +6,8 @@
 const API_BASE = 'https://api.mangadex.org';
 const USER_AGENT = 'MangaView/1.0.0 (Anime Website; +https://github.com/mangadex-fans/mangaview)';
 
-// 图片代理地址 - 使用 CORS 代理
-// Cloudflare Worker 有问题，暂时用 corsproxy.io
-const IMAGE_PROXY_BASE = 'https://corsproxy.io/?';
+// 图片代理地址 - 使用 corsproxy.io 的 url 参数格式
+const IMAGE_PROXY_BASE = 'https://corsproxy.io/?url=';
 
 // Rate limiter: 5 requests per second globally
 class RateLimiter {
@@ -353,14 +352,15 @@ export function getCoverUrl(cover, size = '512') {
     return ''; // 返回空字符串，使用 CSS 占位符
   }
   const fileName = cover.attributes.fileName;
+  const originalUrl = `https://uploads.mangadex.org/covers/${fileName}`;
 
   // 如果配置了图片代理，使用代理
   if (IMAGE_PROXY_BASE) {
-    return `${IMAGE_PROXY_BASE}/covers/${fileName}`;
+    return `${IMAGE_PROXY_BASE}${encodeURIComponent(originalUrl)}`;
   }
 
   // 否则返回原始 URL（会被浏览器阻止，但不会报错）
-  return `https://uploads.mangadex.org/covers/${fileName}`;
+  return originalUrl;
 }
 
 /**

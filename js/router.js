@@ -144,6 +144,11 @@ router.addRoute('/manga/:id', async ({ params }) => {
   await renderMangaDetail(params.id);
 });
 
+router.addRoute('/anime/:id', async ({ params }) => {
+  const { renderMangaDetail } = await import('./app.js');
+  await renderMangaDetail(params.id);
+});
+
 router.addRoute('/chapter/:id/read', async ({ params }) => {
   const { renderChapterReader } = await import('./app.js');
   await renderChapterReader(params.id);

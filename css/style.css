@@ -506,22 +506,52 @@ input, select, textarea {
   aspect-ratio: 3/4;
   overflow: hidden;
   background: linear-gradient(
-    135deg,
+    -45deg,
     var(--color-primary-dark) 0%,
-    var(--color-secondary-dark) 50%,
-    var(--color-accent-dark) 100%
+    var(--color-secondary-dark) 25%,
+    var(--color-secondary) 50%,
+    var(--color-accent-dark) 75%,
+    var(--color-primary-dark) 100%
   );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 .manga-card__cover::before {
-  content: '📖';
-  font-size: 3rem;
-  opacity: 0.5;
+  content: '✦';
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.3);
   position: absolute;
   z-index: 0;
+  animation: starPulse 3s ease-in-out infinite;
+}
+
+.manga-card__cover::after {
+  content: '♡';
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  bottom: 20%;
+  z-index: 0;
+  animation: heartBeat 2s ease-in-out infinite;
+}
+
+@keyframes starPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.1); }
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
 
 .manga-card__cover img {
@@ -1403,3 +1433,338 @@ input, select, textarea {
 .mb-md { margin-bottom: var(--space-md); }
 .mb-lg { margin-bottom: var(--space-lg); }
 .mb-xl { margin-bottom: var(--space-xl); }
+
+/* ============ Shikimori API Styles ============ */
+
+/* Kind badges */
+.kind--tv { color: #7EC8E3; }
+.kind--movie { color: #FFB347; }
+.kind--ova { color: #98D8A3; }
+.kind--ona { color: #C4B0D9; }
+.kind--special { color: #FFB7C5; }
+.kind--manga { color: #FF8C42; }
+.kind--manhwa { color: #5AADCC; }
+.kind--novel { color: #DDA0DD; }
+.kind--oneshot { color: #FF69B4; }
+
+/* Status badges */
+.status--ongoing { color: #7EC8E3; }
+.status--anons { color: #FFB347; }
+.status--released { color: #98D8A3; }
+.status--paused { color: #FF6B6B; }
+.status--discontinued { color: #8888A0; }
+
+/* Score badges */
+.score--excellent { color: #FFD700; }
+.score--great { color: #98D8A3; }
+.score--good { color: #7EC8E3; }
+.score--fair { color: #FFB347; }
+.score--bad { color: #FF6B6B; }
+.score--none { color: #8888A0; }
+
+/* Manga Detail Page */
+.manga-detail__loading {
+  text-align: center;
+  padding: 60px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--bg-card);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.manga-detail__header {
+  display: flex;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.manga-detail__cover {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.manga-detail__cover img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.manga-detail__info {
+  flex: 1;
+}
+
+.manga-detail__title {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+
+.manga-detail__meta {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.manga-detail__score {
+  font-size: 1.5rem;
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.manga-detail__kind {
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  text-transform: capitalize;
+}
+
+.manga-detail__status {
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+}
+
+.manga-detail__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.manga-detail__stat {
+  font-size: 0.9rem;
+}
+
+.manga-detail__stat .label {
+  color: var(--text-muted);
+}
+
+.manga-detail__description {
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg);
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+}
+
+.manga-detail__description h3 {
+  margin-bottom: var(--space-md);
+  color: var(--color-primary);
+}
+
+.manga-detail__description p {
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.manga-detail__characters {
+  margin-top: var(--space-xl);
+}
+
+.manga-detail__characters h3 {
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+}
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--space-lg);
+}
+
+.character-card {
+  text-align: center;
+  padding: var(--space-md);
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-normal);
+}
+
+.character-card:hover {
+  transform: translateY(-4px);
+}
+
+.character-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: var(--space-sm);
+  border: 2px solid var(--color-primary);
+}
+
+.character-name {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.character-role {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ============ Search Page ============ */
+.search-page {
+  padding: var(--space-xl) 0;
+}
+
+.search-header {
+  margin-bottom: var(--space-xl);
+}
+
+.search-title {
+  font-size: 2rem;
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+}
+
+.search-bar {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.search-input-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--space-md) var(--space-md) var(--space-md) 48px;
+  background: var(--bg-card);
+  border: 1px solid var(--bg-elevated);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg);
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+}
+
+.filter-group {
+  min-width: 150px;
+}
+
+.filter-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.filter-select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-elevated);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+/* ============ Pagination ============ */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.pagination__btn {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-card);
+  border: 1px solid var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.pagination__btn:hover:not(:disabled) {
+  background: var(--bg-hover);
+  border-color: var(--color-primary);
+}
+
+.pagination__btn--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--bg-dark);
+}
+
+.pagination__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============ Tags Cloud ============ */
+.tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.filter-tag {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  background: var(--bg-card);
+  border: 1px solid var(--bg-elevated);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.filter-tag:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--bg-dark);
+}
+
+.filter-tag--selected {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: white;
+}
