@@ -1,0 +1,53 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "🌸 MangaView" [ref=e4] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e5]: 🌸
+        - generic [ref=e6]: MangaView
+      - navigation [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: "#/"
+        - link "Search" [ref=e9] [cursor=pointer]:
+          - /url: "#/search"
+        - link "Library" [ref=e10] [cursor=pointer]:
+          - /url: "#/library"
+      - generic [ref=e11]:
+        - img [ref=e12]
+        - textbox "Search manga..." [ref=e15]
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: Welcome to MangaView
+        - heading "Discover Your Next Favorite Manga" [level=1] [ref=e23]
+        - paragraph [ref=e24]: Browse thousands of manga titles from MangaDex. Track your reading progress and find new series to explore.
+        - link "Explore Manga" [ref=e25] [cursor=pointer]:
+          - /url: "#/search"
+          - generic [ref=e26]: Explore Manga
+          - img [ref=e27]
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - heading "Latest Updates" [level=2] [ref=e32]
+          - link "View All" [ref=e33] [cursor=pointer]:
+            - /url: "#/search?sort=latestUploadedChapter"
+            - text: View All
+            - img [ref=e34]
+        - paragraph [ref=e82]: Failed to load updates
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - heading "Popular Manga" [level=2] [ref=e46]
+          - link "View All" [ref=e47] [cursor=pointer]:
+            - /url: "#/search?sort=followedCount"
+            - text: View All
+            - img [ref=e48]
+        - paragraph [ref=e83]: Failed to load
+      - heading "Browse by Genre" [level=2] [ref=e62]
+  - contentinfo [ref=e76]:
+    - generic [ref=e77]:
+      - paragraph [ref=e78]: 🌸 MangaView
+      - paragraph [ref=e79]:
+        - text: Powered by
+        - link "MangaDex API" [ref=e80] [cursor=pointer]:
+          - /url: https://api.mangadex.org
+        - text: . We credit all scanlation groups for their work.
+      - paragraph [ref=e81]: MangaDex™ is a trademark of their respective owners. This is a fan project for educational purposes.

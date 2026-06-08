@@ -1,0 +1,5 @@
+[    4108ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://api.mangadex.org/manga?limit=24&offset=0&order%5BlatestUploadedChapter%5D=desc&includes%5B%5D=author&includes%5B%5D=artist&includes%5B%5D=cover_art&includes%5B%5D=tag&tagMode=AND:0
+[    4109ms] [ERROR] API Error 400. Request ID: 99ceeeb6-2e16-4606-9e8c-b7d4448dd03f {"result":"error","errors":[{"id":"9c346772-7b14-5982-b4b6-7b5888522762","status":400,"title":"validation_exception","detail":"Error validating : The property tagMode is not defined and the definition does not allow additional properties","context":null}]} @ http://localhost:8080/js/api/client.js:116
+[    4109ms] [ERROR] Search failed: Error: API Error 400 (Request ID: 99ceeeb6-2e16-4606-9e8c-b7d4448dd03f)
+    at apiRequest (http://localhost:8080/js/api/client.js:118:11)
+    at async performSearch (http://localhost:8080/js/app.js:392:22) @ http://localhost:8080/js/app.js:418

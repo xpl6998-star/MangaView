@@ -1,0 +1,323 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "🌸 MangaView" [ref=e4] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e5]: 🌸
+        - generic [ref=e6]: MangaView
+      - navigation [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: "#/"
+        - link "Search" [ref=e9] [cursor=pointer]:
+          - /url: "#/search"
+        - link "Library" [ref=e10] [cursor=pointer]:
+          - /url: "#/library"
+      - generic [ref=e11]:
+        - img [ref=e12]
+        - textbox "Search manga..." [ref=e15]
+  - main [ref=e16]:
+    - generic [ref=e366]:
+      - generic [ref=e370]:
+        - generic [ref=e371]: Welcome to MangaView
+        - heading "Discover Your Next Favorite Manga" [level=1] [ref=e372]
+        - paragraph [ref=e373]: Browse thousands of manga titles from MangaDex. Track your reading progress and find new series to explore.
+        - link "Explore Manga" [ref=e374] [cursor=pointer]:
+          - /url: "#/search"
+          - generic [ref=e375]: Explore Manga
+          - img [ref=e376]
+      - generic [ref=e379]:
+        - generic [ref=e380]:
+          - heading "Latest Updates" [level=2] [ref=e381]
+          - link "View All" [ref=e382] [cursor=pointer]:
+            - /url: "#/search?sort=latestUploadedChapter"
+            - text: View All
+            - img [ref=e383]
+        - generic [ref=e385]:
+          - article [ref=e437] [cursor=pointer]:
+            - generic [ref=e438]:
+              - img "Mokushiroku no Yonkishi" [ref=e439]
+              - generic [ref=e441]: ongoing
+              - generic [ref=e442]: safe
+            - generic [ref=e443]:
+              - heading "Mokushiroku no Yonkishi" [level=3] [ref=e444]
+              - generic [ref=e445]:
+                - generic [ref=e446]: Action
+                - generic [ref=e447]: Demons
+                - generic [ref=e448]: Comedy
+          - article [ref=e449] [cursor=pointer]:
+            - generic [ref=e450]:
+              - img "Mairimashita! Iruma-kun" [ref=e451]
+              - generic [ref=e453]: ongoing
+              - generic [ref=e454]: safe
+            - generic [ref=e455]:
+              - heading "Mairimashita! Iruma-kun" [level=3] [ref=e456]
+              - generic [ref=e457]:
+                - generic [ref=e458]: Monsters
+                - generic [ref=e459]: Action
+                - generic [ref=e460]: Demons
+          - article [ref=e461] [cursor=pointer]:
+            - generic [ref=e462]:
+              - img "Ex vs. Stalker" [ref=e463]
+              - generic [ref=e465]: completed
+              - generic [ref=e466]: safe
+            - generic [ref=e467]:
+              - heading "Ex vs. Stalker" [level=3] [ref=e468]
+              - generic [ref=e469]:
+                - generic [ref=e470]: Thriller
+                - generic [ref=e471]: Psychological
+                - generic [ref=e472]: Long Strip
+          - article [ref=e473] [cursor=pointer]:
+            - generic [ref=e474]:
+              - img "Dungeon ni Hisomu Yandere na Kanojo ni Ore wa Nandomo Korosareru" [ref=e475]
+              - generic [ref=e477]: ongoing
+              - generic [ref=e478]: suggestive
+            - generic [ref=e479]:
+              - heading "Dungeon ni Hisomu Yandere na Kanojo ni Ore wa Nandomo Korosareru" [level=3] [ref=e480]
+              - generic [ref=e481]:
+                - generic [ref=e482]: Reincarnation
+                - generic [ref=e483]: Time Travel
+                - generic [ref=e484]: Monsters
+          - article [ref=e485] [cursor=pointer]:
+            - generic [ref=e486]:
+              - img "Nonderi Kubo wa Genjitsu no Koi ga Shiritai" [ref=e487]
+              - generic [ref=e489]: ongoing
+              - generic [ref=e490]: safe
+            - generic [ref=e491]:
+              - heading "Nonderi Kubo wa Genjitsu no Koi ga Shiritai" [level=3] [ref=e492]
+              - generic [ref=e493]:
+                - generic [ref=e494]: Romance
+                - generic [ref=e495]: Comedy
+                - generic [ref=e496]: 4-Koma
+          - article [ref=e497] [cursor=pointer]:
+            - generic [ref=e498]:
+              - img "Madan no Ichi" [ref=e499]
+              - generic [ref=e501]: ongoing
+              - generic [ref=e502]: safe
+            - generic [ref=e503]:
+              - heading "Madan no Ichi" [level=3] [ref=e504]
+              - generic [ref=e505]:
+                - generic [ref=e506]: Award Winning
+                - generic [ref=e507]: Action
+                - generic [ref=e508]: Comedy
+          - article [ref=e509] [cursor=pointer]:
+            - generic [ref=e510]:
+              - img "Mou Kyoumi ga Nai to Rikonsareta Reijou no Igai to Tanoshii Shinseikatsu" [ref=e511]
+              - generic [ref=e513]: ongoing
+              - generic [ref=e514]: safe
+            - generic [ref=e515]:
+              - heading "Mou Kyoumi ga Nai to Rikonsareta Reijou no Igai to Tanoshii Shinseikatsu" [level=3] [ref=e516]
+              - generic [ref=e517]:
+                - generic [ref=e518]: Romance
+                - generic [ref=e519]: Magic
+                - generic [ref=e520]: Drama
+          - article [ref=e521] [cursor=pointer]:
+            - generic [ref=e522]:
+              - img "Burning Kabaddi" [ref=e523]
+              - generic [ref=e525]: completed
+              - generic [ref=e526]: safe
+            - generic [ref=e527]:
+              - heading "Burning Kabaddi" [level=3] [ref=e528]
+              - generic [ref=e529]:
+                - generic [ref=e530]: Award Winning
+                - generic [ref=e531]: Action
+                - generic [ref=e532]: Comedy
+          - article [ref=e533] [cursor=pointer]:
+            - generic [ref=e534]:
+              - 'img "Tetsunabe no Jan! R: Choujou Sakusen" [ref=e535]'
+              - generic [ref=e537]: completed
+              - generic [ref=e538]: suggestive
+            - generic [ref=e539]:
+              - 'heading "Tetsunabe no Jan! R: Choujou Sakusen" [level=3] [ref=e540]'
+              - generic [ref=e541]:
+                - generic [ref=e542]: Action
+                - generic [ref=e543]: Comedy
+                - generic [ref=e544]: Drama
+          - article [ref=e545] [cursor=pointer]:
+            - generic [ref=e546]:
+              - img "傲嬌的病嬌" [ref=e547]
+              - generic [ref=e549]: completed
+              - generic [ref=e550]: suggestive
+            - generic [ref=e551]:
+              - heading "傲嬌的病嬌" [level=3] [ref=e552]
+              - generic [ref=e553]:
+                - generic [ref=e554]: Oneshot
+                - generic [ref=e555]: Romance
+                - generic [ref=e556]: Comedy
+          - article [ref=e557] [cursor=pointer]:
+            - generic [ref=e558]:
+              - img "Got Dropped into a Ghost Story, Still Gotta Work" [ref=e559]
+              - generic [ref=e561]: ongoing
+              - generic [ref=e562]: safe
+            - generic [ref=e563]:
+              - heading "Got Dropped into a Ghost Story, Still Gotta Work" [level=3] [ref=e564]
+              - generic [ref=e565]:
+                - generic [ref=e566]: Thriller
+                - generic [ref=e567]: Action
+                - generic [ref=e568]: Psychological
+          - article [ref=e569] [cursor=pointer]:
+            - generic [ref=e570]:
+              - img "Yuge no Mukou ni Asa o Miru" [ref=e571]
+              - generic [ref=e573]: completed
+              - generic [ref=e574]: erotica
+            - generic [ref=e575]:
+              - heading "Yuge no Mukou ni Asa o Miru" [level=3] [ref=e576]
+              - generic [ref=e577]:
+                - generic [ref=e578]: Romance
+                - generic [ref=e579]: Boys' Love
+                - generic [ref=e580]: Drama
+      - generic [ref=e393]:
+        - generic [ref=e394]:
+          - heading "Popular Manga" [level=2] [ref=e395]
+          - link "View All" [ref=e396] [cursor=pointer]:
+            - /url: "#/search?sort=followedCount"
+            - text: View All
+            - img [ref=e397]
+        - generic [ref=e399]:
+          - article [ref=e581] [cursor=pointer]:
+            - generic [ref=e582]:
+              - img "Na Honjaman Level-Up" [ref=e583]
+              - generic [ref=e585]: completed
+              - generic [ref=e586]: safe
+            - generic [ref=e587]:
+              - heading "Na Honjaman Level-Up" [level=3] [ref=e588]
+              - generic [ref=e589]:
+                - generic [ref=e590]: Award Winning
+                - generic [ref=e591]: Monsters
+                - generic [ref=e592]: Action
+          - article [ref=e593] [cursor=pointer]:
+            - generic [ref=e594]:
+              - img "Sono Bisque Doll wa Koi o Suru" [ref=e595]
+              - generic [ref=e597]: completed
+              - generic [ref=e598]: suggestive
+            - generic [ref=e599]:
+              - heading "Sono Bisque Doll wa Koi o Suru" [level=3] [ref=e600]
+              - generic [ref=e601]:
+                - generic [ref=e602]: Romance
+                - generic [ref=e603]: Comedy
+                - generic [ref=e604]: Drama
+          - article [ref=e605] [cursor=pointer]:
+            - generic [ref=e606]:
+              - img "Kage no Jitsuryokusha ni Naritakute!" [ref=e607]
+              - generic [ref=e609]: ongoing
+              - generic [ref=e610]: safe
+            - generic [ref=e611]:
+              - heading "Kage no Jitsuryokusha ni Naritakute!" [level=3] [ref=e612]
+              - generic [ref=e613]:
+                - generic [ref=e614]: Reincarnation
+                - generic [ref=e615]: Action
+                - generic [ref=e616]: Demons
+          - article [ref=e617] [cursor=pointer]:
+            - generic [ref=e618]:
+              - img "Mato Seihei no Slave" [ref=e619]
+              - generic [ref=e621]: ongoing
+              - generic [ref=e622]: erotica
+            - generic [ref=e623]:
+              - heading "Mato Seihei no Slave" [level=3] [ref=e624]
+              - generic [ref=e625]:
+                - generic [ref=e626]: Sci-Fi
+                - generic [ref=e627]: Monsters
+                - generic [ref=e628]: Action
+          - article [ref=e629] [cursor=pointer]:
+            - generic [ref=e630]:
+              - img "Tensei Shitara Slime datta Ken" [ref=e631]
+              - generic [ref=e633]: ongoing
+              - generic [ref=e634]: safe
+            - generic [ref=e635]:
+              - heading "Tensei Shitara Slime datta Ken" [level=3] [ref=e636]
+              - generic [ref=e637]:
+                - generic [ref=e638]: Reincarnation
+                - generic [ref=e639]: Monsters
+                - generic [ref=e640]: Action
+          - article [ref=e641] [cursor=pointer]:
+            - generic [ref=e642]:
+              - img "Berserk" [ref=e643]
+              - generic [ref=e645]: ongoing
+              - generic [ref=e646]: erotica
+            - generic [ref=e647]:
+              - heading "Berserk" [level=3] [ref=e648]
+              - generic [ref=e649]:
+                - generic [ref=e650]: Award Winning
+                - generic [ref=e651]: Monsters
+                - generic [ref=e652]: Action
+          - article [ref=e653] [cursor=pointer]:
+            - generic [ref=e654]:
+              - img "Sousou no Frieren" [ref=e655]
+              - generic [ref=e657]: hiatus
+              - generic [ref=e658]: safe
+            - generic [ref=e659]:
+              - heading "Sousou no Frieren" [level=3] [ref=e660]
+              - generic [ref=e661]:
+                - generic [ref=e662]: Award Winning
+                - generic [ref=e663]: Monsters
+                - generic [ref=e664]: Demons
+          - article [ref=e665] [cursor=pointer]:
+            - generic [ref=e666]:
+              - img "Chainsaw Man" [ref=e667]
+              - generic [ref=e669]: completed
+              - generic [ref=e670]: suggestive
+            - generic [ref=e671]:
+              - heading "Chainsaw Man" [level=3] [ref=e672]
+              - generic [ref=e673]:
+                - generic [ref=e674]: Award Winning
+                - generic [ref=e675]: Monsters
+                - generic [ref=e676]: Action
+      - generic [ref=e409]:
+        - heading "Browse by Genre" [level=2] [ref=e411]
+        - generic [ref=e412]:
+          - link "Oneshot" [ref=e413] [cursor=pointer]:
+            - /url: "#/search?tags=0234a31e-a729-4e28-9d6a-3f87c4966b9e"
+          - link "Thriller" [ref=e414] [cursor=pointer]:
+            - /url: "#/search?tags=07251805-a27e-4d59-b488-f0bfbec15168"
+          - link "Award Winning" [ref=e415] [cursor=pointer]:
+            - /url: "#/search?tags=0a39b5a1-b235-4886-a747-1d05d216532d"
+          - link "Reincarnation" [ref=e416] [cursor=pointer]:
+            - /url: "#/search?tags=0bc90acb-ccc1-44ca-a34a-b9f3a73259d0"
+          - link "Sci-Fi" [ref=e417] [cursor=pointer]:
+            - /url: "#/search?tags=256c8bd9-4904-4360-bf4f-508a76d67183"
+          - link "Time Travel" [ref=e418] [cursor=pointer]:
+            - /url: "#/search?tags=292e862b-2d17-4062-90a2-0356caa4ae27"
+          - link "Genderswap" [ref=e419] [cursor=pointer]:
+            - /url: "#/search?tags=2bd2e8d0-f146-434a-9b51-fc9ff2c5fe6a"
+          - link "Loli" [ref=e420] [cursor=pointer]:
+            - /url: "#/search?tags=2d1f5d56-a1e5-4d0d-a961-2193588b08ec"
+          - link "Traditional Games" [ref=e421] [cursor=pointer]:
+            - /url: "#/search?tags=31932a7e-5b8e-49a6-9f12-2afa39dc544c"
+          - link "Official Colored" [ref=e422] [cursor=pointer]:
+            - /url: "#/search?tags=320831a8-4026-470b-94f6-8353740e6f04"
+          - link "Historical" [ref=e423] [cursor=pointer]:
+            - /url: "#/search?tags=33771934-028e-4cb3-8744-691e866a923e"
+          - link "Monsters" [ref=e424] [cursor=pointer]:
+            - /url: "#/search?tags=36fd93ea-e8b8-445e-b836-358f02b3d33d"
+          - link "Action" [ref=e425] [cursor=pointer]:
+            - /url: "#/search?tags=391b0423-d847-456f-aff0-8b0cfc03066b"
+          - link "Demons" [ref=e426] [cursor=pointer]:
+            - /url: "#/search?tags=39730448-9a5f-48a2-85b0-a70db87b1233"
+          - link "Psychological" [ref=e427] [cursor=pointer]:
+            - /url: "#/search?tags=3b60b75c-a2d7-4860-ab56-05f391bb889c"
+          - link "Ghosts" [ref=e428] [cursor=pointer]:
+            - /url: "#/search?tags=3bb26d85-09d5-4d2e-880c-c34b974339e9"
+          - link "Animals" [ref=e429] [cursor=pointer]:
+            - /url: "#/search?tags=3de8c75d-8ee3-48ff-98ee-e20a65c86451"
+          - link "Long Strip" [ref=e430] [cursor=pointer]:
+            - /url: "#/search?tags=3e2b8dae-350e-4ab8-a8ce-016e844b9f0d"
+          - link "Romance" [ref=e431] [cursor=pointer]:
+            - /url: "#/search?tags=423e2eae-a7a2-4a8b-ac03-a8351462d71d"
+          - link "Ninja" [ref=e432] [cursor=pointer]:
+            - /url: "#/search?tags=489dd859-9b61-4c37-af75-5b18e88daafc"
+          - link "Comedy" [ref=e433] [cursor=pointer]:
+            - /url: "#/search?tags=4d32cc48-9f00-4cca-9b5a-a839f0764984"
+          - link "Mecha" [ref=e434] [cursor=pointer]:
+            - /url: "#/search?tags=50880a9d-5440-4732-9afb-8f457127e836"
+          - link "Anthology" [ref=e435] [cursor=pointer]:
+            - /url: "#/search?tags=51d83883-4103-437c-b4b1-731cb73d786c"
+          - link "Boys' Love" [ref=e436] [cursor=pointer]:
+            - /url: "#/search?tags=5920b825-4181-4a17-beeb-9918b0ff7a30"
+  - contentinfo [ref=e76]:
+    - generic [ref=e77]:
+      - paragraph [ref=e78]: 🌸 MangaView
+      - paragraph [ref=e79]:
+        - text: Powered by
+        - link "MangaDex API" [ref=e80] [cursor=pointer]:
+          - /url: https://api.mangadex.org
+        - text: . We credit all scanlation groups for their work.
+      - paragraph [ref=e81]: MangaDex™ is a trademark of their respective owners. This is a fan project for educational purposes.

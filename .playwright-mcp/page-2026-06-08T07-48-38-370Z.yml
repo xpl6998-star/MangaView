@@ -1,0 +1,32 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "🌸 MangaView" [ref=e4] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e5]: 🌸
+        - generic [ref=e6]: MangaView
+      - navigation [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: "#/"
+        - link "Search" [ref=e9] [cursor=pointer]:
+          - /url: "#/search"
+        - link "Library" [ref=e10] [cursor=pointer]:
+          - /url: "#/library"
+      - generic [ref=e11]:
+        - img [ref=e12]
+        - textbox "Search manga..." [ref=e15]
+  - main [ref=e16]:
+    - generic [ref=e678]:
+      - heading "404" [level=1] [ref=e679]
+      - paragraph [ref=e680]: Page not found
+      - link "Go Home" [ref=e681] [cursor=pointer]:
+        - /url: "#/"
+  - contentinfo [ref=e76]:
+    - generic [ref=e77]:
+      - paragraph [ref=e78]: 🌸 MangaView
+      - paragraph [ref=e79]:
+        - text: Powered by
+        - link "MangaDex API" [ref=e80] [cursor=pointer]:
+          - /url: https://api.mangadex.org
+        - text: . We credit all scanlation groups for their work.
+      - paragraph [ref=e81]: MangaDex™ is a trademark of their respective owners. This is a fan project for educational purposes.

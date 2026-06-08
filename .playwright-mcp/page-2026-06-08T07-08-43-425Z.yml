@@ -1,0 +1,348 @@
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - button [ref=e7] [cursor=pointer]
+      - generic [ref=e11]:
+        - link "MangaDex" [ref=e12] [cursor=pointer]:
+          - /url: ""
+          - generic [ref=e13]: MangaDex
+        - generic [ref=e14]: 5.13.1
+      - generic [ref=e16]:
+        - button [ref=e18] [cursor=pointer]
+        - button [ref=e22] [cursor=pointer]:
+          - button [ref=e23]
+        - button [ref=e27] [cursor=pointer]:
+          - button [ref=e28]
+  - generic [ref=e33]:
+    - complementary [ref=e34]:
+      - generic [ref=e35]:
+        - button [ref=e36] [cursor=pointer]
+        - textbox "Filter" [ref=e44]
+      - list [ref=e45]:
+        - region "scrollable content" [ref=e49]:
+          - generic [ref=e50]:
+            - listitem [ref=e51]:
+              - link "Home" [ref=e53] [cursor=pointer]:
+                - /url: ./
+                - generic [ref=e58]: Home
+            - listitem [ref=e60]:
+              - link "Limitations/Requirements" [ref=e62] [cursor=pointer]:
+                - /url: ./2-limitations/
+                - generic [ref=e67]: Limitations/Requirements
+            - listitem [ref=e68]:
+              - link "Static Data" [ref=e70] [cursor=pointer]:
+                - /url: ./3-enumerations/
+                - generic [ref=e75]: Static Data
+            - listitem [ref=e76]:
+              - generic [ref=e77] [cursor=pointer]:
+                - link "Concepts" [ref=e78]:
+                  - /url: ./01-concepts/
+                  - generic [ref=e84]: Concepts
+                - button [ref=e86]
+              - list [ref=e89]:
+                - listitem [ref=e90]:
+                  - link "Entity Comments" [ref=e92] [cursor=pointer]:
+                    - /url: ./01-concepts/comments/
+                    - generic [ref=e97]: Entity Comments
+                - listitem [ref=e98]:
+                  - link "Timestamps" [ref=e100] [cursor=pointer]:
+                    - /url: ./01-concepts/timestamps/
+                    - generic [ref=e106]: Timestamps
+                - listitem [ref=e107]:
+                  - link "Pagination" [ref=e109] [cursor=pointer]:
+                    - /url: ./01-concepts/pagination/
+                    - generic [ref=e114]: Pagination
+                - listitem [ref=e115]:
+                  - link "Reference Expansion" [ref=e117] [cursor=pointer]:
+                    - /url: ./01-concepts/reference-expansion/
+                    - generic [ref=e124]: Reference Expansion
+                - listitem [ref=e125]:
+                  - link "reCaptcha" [ref=e127] [cursor=pointer]:
+                    - /url: ./01-concepts/captchas/
+                    - generic [ref=e133]: reCaptcha
+            - listitem [ref=e134]:
+              - generic [ref=e135] [cursor=pointer]:
+                - link "Authentication" [ref=e136]:
+                  - /url: ./02-authentication/
+                  - generic [ref=e141]: Authentication
+                - button [ref=e143]
+              - list [ref=e146]:
+                - listitem [ref=e147]:
+                  - link "Public clients" [ref=e149] [cursor=pointer]:
+                    - /url: ./02-authentication/public-clients/
+                    - generic [ref=e154]: Public clients
+                - listitem [ref=e155]:
+                  - link "Personal clients" [ref=e157] [cursor=pointer]:
+                    - /url: ./02-authentication/personal-clients/
+                    - generic [ref=e162]: Personal clients
+            - listitem [ref=e163]:
+              - generic [ref=e164] [cursor=pointer]:
+                - link "Manga" [ref=e165]:
+                  - /url: ./03-manga/
+                  - generic [ref=e170]: Manga
+                - button [ref=e172]
+              - list [ref=e175]:
+                - listitem [ref=e176]:
+                  - link "Search" [ref=e178] [cursor=pointer]:
+                    - /url: ./03-manga/search/
+                    - generic [ref=e183]: Search
+                - listitem [ref=e184]:
+                  - link "Create" [ref=e186] [cursor=pointer]:
+                    - /url: ./03-manga/creation/
+                    - generic [ref=e191]: Create
+                - listitem [ref=e192]:
+                  - link "MDLists" [ref=e194] [cursor=pointer]:
+                    - /url: ./03-manga/mdlist/
+                    - generic [ref=e199]: MDLists
+                - listitem [ref=e200]:
+                  - link "Cover Images" [ref=e202] [cursor=pointer]:
+                    - /url: ./03-manga/covers/
+                    - generic [ref=e207]: Cover Images
+                - listitem [ref=e208]:
+                  - link "Statistics" [ref=e210] [cursor=pointer]:
+                    - /url: ./03-manga/statistics/
+                    - generic [ref=e216]: Statistics
+            - listitem [ref=e217]:
+              - generic [ref=e218] [cursor=pointer]:
+                - link "Chapters" [ref=e219]:
+                  - /url: ./04-chapter/
+                  - generic [ref=e224]: Chapters
+                - button [ref=e226]
+              - list [ref=e229]:
+                - listitem [ref=e230]:
+                  - link "Search" [ref=e232] [cursor=pointer]:
+                    - /url: ./04-chapter/search/
+                    - generic [ref=e237]: Search
+                - listitem [ref=e238]:
+                  - link "Download" [ref=e240] [cursor=pointer]:
+                    - /url: ./04-chapter/retrieving-chapter/
+                    - generic [ref=e246]: Download
+                - listitem [ref=e247]:
+                  - link "Manga Chapter Feed" [ref=e249] [cursor=pointer]:
+                    - /url: ./04-chapter/feed/
+                    - generic [ref=e254]: Manga Chapter Feed
+                - listitem [ref=e255]:
+                  - generic [ref=e256] [cursor=pointer]:
+                    - link "Upload" [ref=e257]:
+                      - /url: ./04-chapter/upload/
+                      - generic [ref=e263]: Upload
+                    - button [ref=e265]
+            - listitem [ref=e268]:
+              - link "Contributing" [ref=e270] [cursor=pointer]:
+                - /url: ./contributing/
+                - generic [ref=e276]: Contributing
+      - generic [ref=e278]:
+        - navigation [ref=e280]:
+          - list [ref=e281]:
+            - listitem [ref=e282]:
+              - link "MangaDex" [ref=e283] [cursor=pointer]:
+                - /url: https://mangadex.org
+                - generic [ref=e284]: MangaDex
+            - listitem [ref=e285]:
+              - link "Redoc" [ref=e286] [cursor=pointer]:
+                - /url: redoc.html
+                - generic [ref=e290]: Redoc
+            - listitem [ref=e291]:
+              - link "Swagger" [ref=e292] [cursor=pointer]:
+                - /url: swagger.html
+                - generic [ref=e296]: Swagger
+            - listitem [ref=e297]:
+              - link "Discord" [ref=e298] [cursor=pointer]:
+                - /url: https://discord.gg/mangadex
+                - generic [ref=e299]: Discord
+            - listitem [ref=e300]:
+              - link "Gitlab" [ref=e301] [cursor=pointer]:
+                - /url: https://gitlab.com/mangadex-pub/mangadex-api-docs
+                - generic [ref=e302]: Gitlab
+        - link "Powered by" [ref=e303] [cursor=pointer]:
+          - /url: https://retype.com/
+          - generic [ref=e304]: Powered by
+          - img [ref=e305]
+    - generic [ref=e310]:
+      - generic [ref=e311]:
+        - main [ref=e312]:
+          - generic [ref=e313]:
+            - button [ref=e314] [cursor=pointer]
+            - heading "# MangaDex API documentation" [level=1] [ref=e318]:
+              - link "#" [ref=e319] [cursor=pointer]:
+                - /url: "#mangadex-api-documentation"
+              - text: MangaDex API documentation
+            - paragraph [ref=e320]: MangaDex is an ad-free manga reader offering high-quality images.
+            - paragraph [ref=e321]:
+              - text: This sub-site documents the usage of our API for projects of your own. As our API changes over time, so does this document. We always give advance notice of significant changes in the
+              - strong [ref=e322]: api-changelog
+              - text: channel of our
+              - link "Discord server" [ref=e323] [cursor=pointer]:
+                - /url: https://discord.gg/mangadex
+              - text: .
+            - heading "# Acceptable Usage Policy" [level=2] [ref=e325]:
+              - link "#" [ref=e326] [cursor=pointer]:
+                - /url: "#acceptable-usage-policy"
+              - text: Acceptable Usage Policy
+            - paragraph [ref=e327]:
+              - text: We make our API
+              - strong [ref=e328]: entirely public
+              - text: and
+              - strong [ref=e329]: free to use
+              - text: "exclusively for projects that satisfy the following:"
+            - list [ref=e330]:
+              - listitem [ref=e331]:
+                - text: You
+                - strong [ref=e332]: MUST
+                - text: credit MangaDex
+              - listitem [ref=e333]:
+                - text: You
+                - strong [ref=e334]: MUST
+                - text: credit scanlation groups (and honor their content removal requests) if you allow reading chapters
+              - listitem [ref=e335]:
+                - text: You
+                - strong [ref=e336]: CANNOT
+                - text: run ads or paid services on your website and/or apps
+            - generic [ref=e337]:
+              - generic [ref=e338] [cursor=pointer]:
+                - generic [ref=e340]: Scanlation group removal requests
+                - link [ref=e344]:
+                  - /url: "#scanlation-group-removal-requests"
+              - generic [ref=e345]:
+                - paragraph [ref=e346]: A scanlation group removal request is any request in writing that originates from an active (as per the group's MangaDex page) scanlation group's leader asking you to make their works unavailable on your platform.
+                - paragraph [ref=e347]: As we do honor such requests, you must in turn honor them. This applies to both groups that upload on MangaDex and groups that do not.
+            - generic [ref=e348]:
+              - generic [ref=e349] [cursor=pointer]:
+                - generic [ref=e351]: What constitutes an "ad" or a "paid service"?
+                - link [ref=e355]:
+                  - /url: "#what-constitutes-an-ad-or-a-paid-service"
+              - generic [ref=e356]:
+                - paragraph [ref=e357]: The point is that you must not be profiting from our API. Exceptions may be made for legitimate services, but never for non-legal services.
+                - paragraph [ref=e358]: So the rule of thumb is that you may not have any advertisement (placed content from which you derive a revenue) at all on your platform, nor sell access to anything provided by the MangaDex API. You may accept donations however.
+                - paragraph [ref=e359]: In the end, we're not lawyers, and will judge on a case-by-case basis. We will cut off offenders even if "technically" those rules don't cover them because of some semantic loophole.
+            - heading "# Issues and Questions" [level=2] [ref=e361]:
+              - link "#" [ref=e362] [cursor=pointer]:
+                - /url: "#issues-and-questions"
+              - text: Issues and Questions
+            - heading "# I have a question" [level=3] [ref=e364]:
+              - link "#" [ref=e365] [cursor=pointer]:
+                - /url: "#i-have-a-question"
+              - text: I have a question
+            - paragraph [ref=e366]:
+              - text: You may join
+              - link "our Discord" [ref=e367] [cursor=pointer]:
+                - /url: https://discord.gg/mangadex
+              - text: "'s"
+              - code [ref=e368]: "#dev-talk-api"
+              - text: channel to ask questions or for help.
+            - paragraph [ref=e369]: However we're all busy so please read the docs first, then a second time, or try searching in the channel. Then ask away if you can't figure it out.
+            - heading "# Security Issues" [level=3] [ref=e371]:
+              - link "#" [ref=e372] [cursor=pointer]:
+                - /url: "#security-issues"
+              - text: Security Issues
+            - paragraph [ref=e373]: "If you think you found a security issue, please contact us privately as soon as possible via either:"
+            - list [ref=e374]:
+              - listitem [ref=e375]:
+                - strong [ref=e376]: (Preferred)
+                - text: Our security@ email (see
+                - link "security.txt file" [ref=e377] [cursor=pointer]:
+                  - /url: https://api.mangadex.org/security.txt
+                - text: )
+              - listitem [ref=e378]:
+                - text: A staff member on our
+                - link "Discord server" [ref=e379] [cursor=pointer]:
+                  - /url: https://discord.gg/mangadex
+            - paragraph [ref=e380]: If you aren't certain, it is better to ask us privately first anyway. We prefer a false-positive than something coming our endangering our users' privacy.
+            - paragraph [ref=e381]: And please keep it in private until you get a response; there are a lots of eyes watching our public discussion channels, ready to abuse anything they can as soon as they learn of it.
+            - heading "# I found a bug" [level=3] [ref=e383]:
+              - link "#" [ref=e384] [cursor=pointer]:
+                - /url: "#i-found-a-bug"
+              - text: I found a bug
+            - paragraph [ref=e385]:
+              - text: Please read the docs carefully and
+              - strong [ref=e386]: triple-check
+              - text: the request you're actually sending to us. If you're sure you found a bug, then congrats and please report it to us so we can fix it!
+            - generic [ref=e387]:
+              - generic [ref=e388] [cursor=pointer]:
+                - generic [ref=e390]: Request identifiers for debugging
+                - link [ref=e394]:
+                  - /url: "#request-identifiers-for-debugging"
+              - generic [ref=e395]:
+                - paragraph [ref=e396]:
+                  - text: Every HTTP response from our services has a
+                  - code [ref=e397]: X-Request-ID
+                  - text: header with a value unique to the request-response that was handled. Please provide it to us when reporting the bug. If your request has a body, please also provide it.
+                - paragraph [ref=e398]: "Essentially, we suggest that your error error handling should look something like this:"
+                - generic [ref=e400]:
+                  - button [ref=e404] [cursor=pointer]
+                  - region "scrollable content" [ref=e413]:
+                    - code [ref=e415]: "var httpResponse = httpClient.execute(httpRequest); if (httpResponse.status >= 400) { logger.error(\" Request ID: ${httpResponse.headers['X-Request-ID]'} Request: ${httpRequest.body} Response: ${httpResponse.body} \"); }"
+                - alert [ref=e418]:
+                  - generic [ref=e425]:
+                    - paragraph [ref=e426]:
+                      - text: The HTTP specification notes that
+                      - link "headers (fields) are case-insensitive" [ref=e427] [cursor=pointer]:
+                        - /url: https://www.rfc-editor.org/rfc/rfc9110.html#fields
+                      - text: so check that your HTTP library is properly handling that when retrieving the header's value.
+                    - paragraph [ref=e428]:
+                      - text: Ours are
+                      - emphasis [ref=e429]: typically
+                      - text: always lowercase in practice but do not rely on that.
+            - heading "# I found something missing/wrong in the documentation" [level=3] [ref=e431]:
+              - link "#" [ref=e432] [cursor=pointer]:
+                - /url: "#i-found-something-missingwrong-in-the-documentation"
+              - text: I found something missing/wrong in the documentation
+            - paragraph [ref=e433]:
+              - text: We sometimes forget or make mistakes when updating the documentation. Please report it to us on our
+              - link "Discord server" [ref=e434] [cursor=pointer]:
+                - /url: https://discord.gg/mangadex
+              - text: ", or make a merge request for it against our api-docs repository."
+            - paragraph [ref=e435]: Occasionally, some things (like response fields) may be undocumented on purpose, for example when they are only experimental and cannot be relied upon yet. If you ask us, we will clarify it.
+          - generic [ref=e436]:
+            - link "Edit this page" [ref=e438] [cursor=pointer]:
+              - /url: https://gitlab.com/mangadex-pub/mangadex-api-docs/blob/main/index.md
+              - img [ref=e439]
+              - generic [ref=e443]: Edit this page
+            - navigation [ref=e444]:
+              - link "Next Limitations/Requirements" [ref=e447] [cursor=pointer]:
+                - /url: 2-limitations/
+                - generic [ref=e448]:
+                  - generic [ref=e449]: Next
+                  - generic [ref=e450]: Limitations/Requirements
+                - img [ref=e451]
+        - contentinfo [ref=e455]:
+          - generic:
+            - list
+          - paragraph [ref=e457]: © Copyright 2025. All rights reserved.
+      - region "scrollable content" [ref=e463]:
+        - generic [ref=e464]:
+          - generic [ref=e465]:
+            - generic [ref=e466]: Contents
+            - button [ref=e467] [cursor=pointer]
+          - list [ref=e470]:
+            - listitem [ref=e471]:
+              - link "Acceptable Usage Policy" [ref=e472] [cursor=pointer]:
+                - /url: "#acceptable-usage-policy"
+                - text: Acceptable Usage Policy
+            - listitem [ref=e473]:
+              - link "Issues and Questions" [ref=e474] [cursor=pointer]:
+                - /url: "#issues-and-questions"
+                - text: Issues and Questions
+            - listitem [ref=e475]:
+              - link "I have a question" [ref=e476] [cursor=pointer]:
+                - /url: "#i-have-a-question"
+                - text: I have a question
+            - listitem [ref=e477]:
+              - link "Security Issues" [ref=e478] [cursor=pointer]:
+                - /url: "#security-issues"
+                - text: Security Issues
+            - listitem [ref=e479]:
+              - link "I found a bug" [ref=e480] [cursor=pointer]:
+                - /url: "#i-found-a-bug"
+                - text: I found a bug
+            - listitem [ref=e481]:
+              - link "I found something missing/wrong in the documentation" [ref=e482] [cursor=pointer]:
+                - /url: "#i-found-something-missingwrong-in-the-documentation"
+                - text: I found something missing/wrong in the documentation
+  - generic [ref=e485]:
+    - generic [ref=e486]:
+      - textbox "Search" [ref=e490]
+      - generic:
+        - generic:
+          - generic: Ctrl K
+    - button [ref=e491] [cursor=pointer]

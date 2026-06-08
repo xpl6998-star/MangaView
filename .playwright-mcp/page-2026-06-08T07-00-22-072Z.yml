@@ -1,0 +1,832 @@
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - button [ref=e7] [cursor=pointer]
+      - generic [ref=e11]:
+        - link "MangaDex" [ref=e12] [cursor=pointer]:
+          - /url: ../
+          - generic [ref=e13]: MangaDex
+        - generic [ref=e14]: 5.13.1
+      - generic [ref=e16]:
+        - button [ref=e18] [cursor=pointer]
+        - button [ref=e22] [cursor=pointer]:
+          - button [ref=e23]
+        - button [ref=e27] [cursor=pointer]:
+          - button [ref=e28]
+  - generic [ref=e33]:
+    - complementary [ref=e34]:
+      - generic [ref=e35]:
+        - button [ref=e36] [cursor=pointer]
+        - textbox "Filter" [ref=e44]
+      - list [ref=e45]:
+        - region "scrollable content" [ref=e49]:
+          - generic [ref=e50]:
+            - listitem [ref=e51]:
+              - link "Home" [ref=e53] [cursor=pointer]:
+                - /url: ../
+                - generic [ref=e58]: Home
+            - listitem [ref=e59]:
+              - link "Limitations/Requirements" [ref=e61] [cursor=pointer]:
+                - /url: ../2-limitations/
+                - generic [ref=e66]: Limitations/Requirements
+            - listitem [ref=e67]:
+              - link "Static Data" [ref=e69] [cursor=pointer]:
+                - /url: ../3-enumerations/
+                - generic [ref=e74]: Static Data
+            - listitem [ref=e76]:
+              - generic [ref=e77] [cursor=pointer]:
+                - link "Concepts" [ref=e78]:
+                  - /url: ../01-concepts/
+                  - generic [ref=e84]: Concepts
+                - button [ref=e86]
+              - list [ref=e89]:
+                - listitem [ref=e90]:
+                  - link "Entity Comments" [ref=e92] [cursor=pointer]:
+                    - /url: ../01-concepts/comments/
+                    - generic [ref=e97]: Entity Comments
+                - listitem [ref=e98]:
+                  - link "Timestamps" [ref=e100] [cursor=pointer]:
+                    - /url: ../01-concepts/timestamps/
+                    - generic [ref=e106]: Timestamps
+                - listitem [ref=e107]:
+                  - link "Pagination" [ref=e109] [cursor=pointer]:
+                    - /url: ../01-concepts/pagination/
+                    - generic [ref=e114]: Pagination
+                - listitem [ref=e115]:
+                  - link "Reference Expansion" [ref=e117] [cursor=pointer]:
+                    - /url: ../01-concepts/reference-expansion/
+                    - generic [ref=e124]: Reference Expansion
+                - listitem [ref=e125]:
+                  - link "reCaptcha" [ref=e127] [cursor=pointer]:
+                    - /url: ../01-concepts/captchas/
+                    - generic [ref=e133]: reCaptcha
+            - listitem [ref=e134]:
+              - generic [ref=e135] [cursor=pointer]:
+                - link "Authentication" [ref=e136]:
+                  - /url: ../02-authentication/
+                  - generic [ref=e141]: Authentication
+                - button [ref=e143]
+              - list [ref=e146]:
+                - listitem [ref=e147]:
+                  - link "Public clients" [ref=e149] [cursor=pointer]:
+                    - /url: ../02-authentication/public-clients/
+                    - generic [ref=e154]: Public clients
+                - listitem [ref=e155]:
+                  - link "Personal clients" [ref=e157] [cursor=pointer]:
+                    - /url: ../02-authentication/personal-clients/
+                    - generic [ref=e162]: Personal clients
+            - listitem [ref=e163]:
+              - generic [ref=e164] [cursor=pointer]:
+                - link "Manga" [ref=e165]:
+                  - /url: ../03-manga/
+                  - generic [ref=e170]: Manga
+                - button [ref=e172]
+              - list [ref=e175]:
+                - listitem [ref=e176]:
+                  - link "Search" [ref=e178] [cursor=pointer]:
+                    - /url: ../03-manga/search/
+                    - generic [ref=e183]: Search
+                - listitem [ref=e184]:
+                  - link "Create" [ref=e186] [cursor=pointer]:
+                    - /url: ../03-manga/creation/
+                    - generic [ref=e191]: Create
+                - listitem [ref=e192]:
+                  - link "MDLists" [ref=e194] [cursor=pointer]:
+                    - /url: ../03-manga/mdlist/
+                    - generic [ref=e199]: MDLists
+                - listitem [ref=e200]:
+                  - link "Cover Images" [ref=e202] [cursor=pointer]:
+                    - /url: ../03-manga/covers/
+                    - generic [ref=e207]: Cover Images
+                - listitem [ref=e208]:
+                  - link "Statistics" [ref=e210] [cursor=pointer]:
+                    - /url: ../03-manga/statistics/
+                    - generic [ref=e216]: Statistics
+            - listitem [ref=e217]:
+              - generic [ref=e218] [cursor=pointer]:
+                - link "Chapters" [ref=e219]:
+                  - /url: ../04-chapter/
+                  - generic [ref=e224]: Chapters
+                - button [ref=e226]
+              - list [ref=e229]:
+                - listitem [ref=e230]:
+                  - link "Search" [ref=e232] [cursor=pointer]:
+                    - /url: ../04-chapter/search/
+                    - generic [ref=e237]: Search
+                - listitem [ref=e238]:
+                  - link "Download" [ref=e240] [cursor=pointer]:
+                    - /url: ../04-chapter/retrieving-chapter/
+                    - generic [ref=e246]: Download
+                - listitem [ref=e247]:
+                  - link "Manga Chapter Feed" [ref=e249] [cursor=pointer]:
+                    - /url: ../04-chapter/feed/
+                    - generic [ref=e254]: Manga Chapter Feed
+                - listitem [ref=e255]:
+                  - generic [ref=e256] [cursor=pointer]:
+                    - link "Upload" [ref=e257]:
+                      - /url: ../04-chapter/upload/
+                      - generic [ref=e263]: Upload
+                    - button [ref=e265]
+            - listitem [ref=e268]:
+              - link "Contributing" [ref=e270] [cursor=pointer]:
+                - /url: ../contributing/
+                - generic [ref=e276]: Contributing
+      - generic [ref=e278]:
+        - navigation [ref=e280]:
+          - list [ref=e281]:
+            - listitem [ref=e282]:
+              - link "MangaDex" [ref=e283] [cursor=pointer]:
+                - /url: https://mangadex.org
+                - generic [ref=e284]: MangaDex
+            - listitem [ref=e285]:
+              - link "Redoc" [ref=e286] [cursor=pointer]:
+                - /url: ../redoc.html
+                - generic [ref=e290]: Redoc
+            - listitem [ref=e291]:
+              - link "Swagger" [ref=e292] [cursor=pointer]:
+                - /url: ../swagger.html
+                - generic [ref=e296]: Swagger
+            - listitem [ref=e297]:
+              - link "Discord" [ref=e298] [cursor=pointer]:
+                - /url: https://discord.gg/mangadex
+                - generic [ref=e299]: Discord
+            - listitem [ref=e300]:
+              - link "Gitlab" [ref=e301] [cursor=pointer]:
+                - /url: https://gitlab.com/mangadex-pub/mangadex-api-docs
+                - generic [ref=e302]: Gitlab
+        - link "Powered by" [ref=e303] [cursor=pointer]:
+          - /url: https://retype.com/
+          - generic [ref=e304]: Powered by
+          - img [ref=e305]
+    - generic [ref=e310]:
+      - generic [ref=e311]:
+        - main [ref=e312]:
+          - generic [ref=e313]:
+            - button [ref=e314] [cursor=pointer]
+            - heading "# Static Data" [level=1] [ref=e318]:
+              - link "#" [ref=e319] [cursor=pointer]:
+                - /url: "#static-data"
+              - text: Static Data
+            - heading "# Language Codes & Localization" [level=2] [ref=e321]:
+              - link "#" [ref=e322] [cursor=pointer]:
+                - /url: "#language-codes--localization"
+              - text: Language Codes & Localization
+            - paragraph [ref=e323]:
+              - text: To denote Chapter Translation language, translated fields such as Titles and Descriptions, the API expects a 2-letter language code in accordance with the
+              - link "ISO 639-1 standard" [ref=e324] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+              - text: . Additionally, some cases require the
+              - link "5-letter extension" [ref=e325] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/IETF_language_tag
+              - text: if the alpha-2 code is not sufficient to determine the correct sub-type of a language, in the style of $language-$region, e.g.
+              - code [ref=e326]: zh-hk
+              - text: or
+              - code [ref=e327]: pt-br
+              - text: .
+            - paragraph [ref=e328]:
+              - text: Because there is no standardized method of denoting romanized translations, we chose to append the
+              - code [ref=e329]: "-ro"
+              - text: suffix. For example the romanized version of
+              - code [ref=e330]: 五等分の花嫁
+              - text: is
+              - code [ref=e331]: 5Toubun no Hanayome
+              - text: or
+              - code [ref=e332]: Gotoubun no Hanayome
+              - text: . Both would have the
+              - code [ref=e333]: ja-ro
+              - text: language code, alternative versions are inserted as alternative titles. This is a clear distinction from the localized
+              - code [ref=e334]: en
+              - text: translation
+              - code [ref=e335]: The Quintessential Quintuplets
+            - paragraph [ref=e336]: Notable exceptions are in the table below, otherwise ask a staff member if unsure.
+            - region "scrollable content" [ref=e341]:
+              - table [ref=e343]:
+                - rowgroup [ref=e344]:
+                  - row "alpha-5 Description" [ref=e345]:
+                    - columnheader "alpha-5" [ref=e346]
+                    - columnheader "Description" [ref=e347]
+                - rowgroup [ref=e348]:
+                  - row "zh Simplified Chinese" [ref=e349]:
+                    - cell "zh" [ref=e350]:
+                      - code [ref=e351]: zh
+                    - cell "Simplified Chinese" [ref=e352]
+                  - row "zh-hk Traditional Chinese" [ref=e353]:
+                    - cell "zh-hk" [ref=e354]:
+                      - code [ref=e355]: zh-hk
+                    - cell "Traditional Chinese" [ref=e356]
+                  - row "pt-br Brazilian Portugese" [ref=e357]:
+                    - cell "pt-br" [ref=e358]:
+                      - code [ref=e359]: pt-br
+                    - cell "Brazilian Portugese" [ref=e360]
+                  - row "es Castilian Spanish" [ref=e361]:
+                    - cell "es" [ref=e362]:
+                      - code [ref=e363]: es
+                    - cell "Castilian Spanish" [ref=e364]
+                  - row "es-la Latin American Spanish" [ref=e365]:
+                    - cell "es-la" [ref=e366]:
+                      - code [ref=e367]: es-la
+                    - cell "Latin American Spanish" [ref=e368]
+                  - row "ja-ro Romanized Japanese" [ref=e369]:
+                    - cell "ja-ro" [ref=e370]:
+                      - code [ref=e371]: ja-ro
+                    - cell "Romanized Japanese" [ref=e372]
+                  - row "ko-ro Romanized Korean" [ref=e373]:
+                    - cell "ko-ro" [ref=e374]:
+                      - code [ref=e375]: ko-ro
+                    - cell "Romanized Korean" [ref=e376]
+                  - row "zh-ro Romanized Chinese" [ref=e377]:
+                    - cell "zh-ro" [ref=e378]:
+                      - code [ref=e379]: zh-ro
+                    - cell "Romanized Chinese" [ref=e380]
+            - heading "# Manga publication demographic" [level=2] [ref=e382]:
+              - link "#" [ref=e383] [cursor=pointer]:
+                - /url: "#manga-publication-demographic"
+              - text: Manga publication demographic
+            - region "scrollable content" [ref=e388]:
+              - table [ref=e390]:
+                - rowgroup [ref=e391]:
+                  - row "Value Description" [ref=e392]:
+                    - columnheader "Value" [ref=e393]
+                    - columnheader "Description" [ref=e394]
+                - rowgroup [ref=e395]:
+                  - row "shounen Manga is a Shounen" [ref=e396]:
+                    - cell "shounen" [ref=e397]
+                    - cell "Manga is a Shounen" [ref=e398]
+                  - row "shoujo Manga is a Shoujo" [ref=e399]:
+                    - cell "shoujo" [ref=e400]
+                    - cell "Manga is a Shoujo" [ref=e401]
+                  - row "josei Manga is a Josei" [ref=e402]:
+                    - cell "josei" [ref=e403]
+                    - cell "Manga is a Josei" [ref=e404]
+                  - row "seinen Manga is a Seinen" [ref=e405]:
+                    - cell "seinen" [ref=e406]
+                    - cell "Manga is a Seinen" [ref=e407]
+            - heading "# Manga status" [level=2] [ref=e409]:
+              - link "#" [ref=e410] [cursor=pointer]:
+                - /url: "#manga-status"
+              - text: Manga status
+            - region "scrollable content" [ref=e415]:
+              - table [ref=e417]:
+                - rowgroup [ref=e418]:
+                  - row "Value Description" [ref=e419]:
+                    - columnheader "Value" [ref=e420]
+                    - columnheader "Description" [ref=e421]
+                - rowgroup [ref=e422]:
+                  - row "ongoing Manga is still going on" [ref=e423]:
+                    - cell "ongoing" [ref=e424]
+                    - cell "Manga is still going on" [ref=e425]
+                  - row "completed Manga is completed" [ref=e426]:
+                    - cell "completed" [ref=e427]
+                    - cell "Manga is completed" [ref=e428]
+                  - row "hiatus Manga is paused" [ref=e429]:
+                    - cell "hiatus" [ref=e430]
+                    - cell "Manga is paused" [ref=e431]
+                  - row "cancelled Manga has been cancelled" [ref=e432]:
+                    - cell "cancelled" [ref=e433]
+                    - cell "Manga has been cancelled" [ref=e434]
+            - heading "# Manga reading status" [level=2] [ref=e436]:
+              - link "#" [ref=e437] [cursor=pointer]:
+                - /url: "#manga-reading-status"
+              - text: Manga reading status
+            - region "scrollable content" [ref=e442]:
+              - table [ref=e444]:
+                - rowgroup [ref=e445]:
+                  - row "Value" [ref=e446]:
+                    - columnheader "Value" [ref=e447]
+                - rowgroup [ref=e448]:
+                  - row "reading" [ref=e449]:
+                    - cell "reading" [ref=e450]
+                  - row "on_hold" [ref=e451]:
+                    - cell "on_hold" [ref=e452]
+                  - row "plan_to_read" [ref=e453]:
+                    - cell "plan_to_read" [ref=e454]
+                  - row "dropped" [ref=e455]:
+                    - cell "dropped" [ref=e456]
+                  - row "re_reading" [ref=e457]:
+                    - cell "re_reading" [ref=e458]
+                  - row "completed" [ref=e459]:
+                    - cell "completed" [ref=e460]
+            - heading "# Manga content rating" [level=2] [ref=e462]:
+              - link "#" [ref=e463] [cursor=pointer]:
+                - /url: "#manga-content-rating"
+              - text: Manga content rating
+            - region "scrollable content" [ref=e468]:
+              - table [ref=e470]:
+                - rowgroup [ref=e471]:
+                  - row "Value Description" [ref=e472]:
+                    - columnheader "Value" [ref=e473]
+                    - columnheader "Description" [ref=e474]
+                - rowgroup [ref=e475]:
+                  - row "safe Safe content" [ref=e476]:
+                    - cell "safe" [ref=e477]
+                    - cell "Safe content" [ref=e478]
+                  - row "suggestive Suggestive content" [ref=e479]:
+                    - cell "suggestive" [ref=e480]
+                    - cell "Suggestive content" [ref=e481]
+                  - row "erotica Erotica content" [ref=e482]:
+                    - cell "erotica" [ref=e483]
+                    - cell "Erotica content" [ref=e484]
+                  - row "pornographic Pornographic content" [ref=e485]:
+                    - cell "pornographic" [ref=e486]
+                    - cell "Pornographic content" [ref=e487]
+            - heading "# Manga order options" [level=2] [ref=e489]:
+              - link "#" [ref=e490] [cursor=pointer]:
+                - /url: "#manga-order-options"
+              - text: Manga order options
+            - region "scrollable content" [ref=e495]:
+              - table [ref=e497]:
+                - rowgroup [ref=e498]:
+                  - row "Name Value Default" [ref=e499]:
+                    - columnheader "Name" [ref=e500]
+                    - columnheader "Value" [ref=e501]
+                    - columnheader "Default" [ref=e502]
+                - rowgroup [ref=e503]:
+                  - 'row "title Enum: \"asc\", \"desc\"" [ref=e504]':
+                    - cell "title" [ref=e505]
+                    - 'cell "Enum: \"asc\", \"desc\"" [ref=e506]':
+                      - text: "Enum:"
+                      - code [ref=e507]: "\"asc\""
+                      - text: ","
+                      - code [ref=e508]: "\"desc\""
+                    - cell [ref=e509]
+                  - 'row "year Enum: \"asc\", \"desc\"" [ref=e510]':
+                    - cell "year" [ref=e511]
+                    - 'cell "Enum: \"asc\", \"desc\"" [ref=e512]':
+                      - text: "Enum:"
+                      - code [ref=e513]: "\"asc\""
+                      - text: ","
+                      - code [ref=e514]: "\"desc\""
+                    - cell [ref=e515]
+                  - 'row "createdAt Enum: \"asc\", \"desc\"" [ref=e516]':
+                    - cell "createdAt" [ref=e517]
+                    - 'cell "Enum: \"asc\", \"desc\"" [ref=e518]':
+                      - text: "Enum:"
+                      - code [ref=e519]: "\"asc\""
+                      - text: ","
+                      - code [ref=e520]: "\"desc\""
+                    - cell [ref=e521]
+                  - 'row "updatedAt Enum: \"asc\", \"desc\"" [ref=e522]':
+                    - cell "updatedAt" [ref=e523]
+                    - 'cell "Enum: \"asc\", \"desc\"" [ref=e524]':
+                      - text: "Enum:"
+                      - code [ref=e525]: "\"asc\""
+                      - text: ","
+                      - code [ref=e526]: "\"desc\""
+                    - cell [ref=e527]
+                  - 'row "latestUploadedChapter Enum: \"asc\", \"desc\" \"desc\"" [ref=e528]':
+                    - cell "latestUploadedChapter" [ref=e529]
+                    - 'cell "Enum: \"asc\", \"desc\"" [ref=e530]':
+                      - text: "Enum:"
+                      - code [ref=e531]: "\"asc\""
+                      - text: ","
+                      - code [ref=e532]: "\"desc\""
+                    - cell "\"desc\"" [ref=e533]:
+                      - code [ref=e534]: "\"desc\""
+                  - 'row "followedCount Enum: \"asc\", \"desc\"" [ref=e535]':
+                    - cell "followedCount" [ref=e536]
+                    - 'cell "Enum: \"asc\", \"desc\"" [ref=e537]':
+                      - text: "Enum:"
+                      - code [ref=e538]: "\"asc\""
+                      - text: ","
+                      - code [ref=e539]: "\"desc\""
+                    - cell [ref=e540]
+                  - 'row "relevance Enum: \"asc\", \"desc\"" [ref=e541]':
+                    - cell "relevance" [ref=e542]
+                    - 'cell "Enum: \"asc\", \"desc\"" [ref=e543]':
+                      - text: "Enum:"
+                      - code [ref=e544]: "\"asc\""
+                      - text: ","
+                      - code [ref=e545]: "\"desc\""
+                    - cell [ref=e546]
+            - heading "# Chapter order options" [level=2] [ref=e548]:
+              - link "#" [ref=e549] [cursor=pointer]:
+                - /url: "#chapter-order-options"
+              - text: Chapter order options
+            - region "scrollable content" [ref=e554]:
+              - table [ref=e556]:
+                - rowgroup [ref=e557]:
+                  - row "Name Value Default" [ref=e558]:
+                    - columnheader "Name" [ref=e559]
+                    - columnheader "Value" [ref=e560]
+                    - columnheader "Default" [ref=e561]
+                - rowgroup [ref=e562]:
+                  - 'row "createdAt Enum: \"asc\", \"desc\" \"asc\"" [ref=e563]':
+                    - cell "createdAt" [ref=e564]
+                    - 'cell "Enum: \"asc\", \"desc\"" [ref=e565]':
+                      - text: "Enum:"
+                      - code [ref=e566]: "\"asc\""
+                      - text: ","
+                      - code [ref=e567]: "\"desc\""
+                    - cell "\"asc\"" [ref=e568]:
+                      - code [ref=e569]: "\"asc\""
+                  - 'row "updatedAt Enum: \"asc\", \"desc\" \"asc\"" [ref=e570]':
+                    - cell "updatedAt" [ref=e571]
+                    - 'cell "Enum: \"asc\", \"desc\"" [ref=e572]':
+                      - text: "Enum:"
+                      - code [ref=e573]: "\"asc\""
+                      - text: ","
+                      - code [ref=e574]: "\"desc\""
+                    - cell "\"asc\"" [ref=e575]:
+                      - code [ref=e576]: "\"asc\""
+                  - 'row "publishAt Enum: \"asc\", \"desc\" \"asc\"" [ref=e577]':
+                    - cell "publishAt" [ref=e578]
+                    - 'cell "Enum: \"asc\", \"desc\"" [ref=e579]':
+                      - text: "Enum:"
+                      - code [ref=e580]: "\"asc\""
+                      - text: ","
+                      - code [ref=e581]: "\"desc\""
+                    - cell "\"asc\"" [ref=e582]:
+                      - code [ref=e583]: "\"asc\""
+                  - 'row "readableAt Enum: \"asc\", \"desc\" \"asc\"" [ref=e584]':
+                    - cell "readableAt" [ref=e585]
+                    - 'cell "Enum: \"asc\", \"desc\"" [ref=e586]':
+                      - text: "Enum:"
+                      - code [ref=e587]: "\"asc\""
+                      - text: ","
+                      - code [ref=e588]: "\"desc\""
+                    - cell "\"asc\"" [ref=e589]:
+                      - code [ref=e590]: "\"asc\""
+                  - 'row "volume Enum: \"asc\", \"desc\" \"asc\"" [ref=e591]':
+                    - cell "volume" [ref=e592]
+                    - 'cell "Enum: \"asc\", \"desc\"" [ref=e593]':
+                      - text: "Enum:"
+                      - code [ref=e594]: "\"asc\""
+                      - text: ","
+                      - code [ref=e595]: "\"desc\""
+                    - cell "\"asc\"" [ref=e596]:
+                      - code [ref=e597]: "\"asc\""
+                  - 'row "chapter Enum: \"asc\", \"desc\" \"asc\"" [ref=e598]':
+                    - cell "chapter" [ref=e599]
+                    - 'cell "Enum: \"asc\", \"desc\"" [ref=e600]':
+                      - text: "Enum:"
+                      - code [ref=e601]: "\"asc\""
+                      - text: ","
+                      - code [ref=e602]: "\"desc\""
+                    - cell "\"asc\"" [ref=e603]:
+                      - code [ref=e604]: "\"asc\""
+            - heading "# CustomList visibility" [level=2] [ref=e606]:
+              - link "#" [ref=e607] [cursor=pointer]:
+                - /url: "#customlist-visibility"
+              - text: CustomList visibility
+            - region "scrollable content" [ref=e612]:
+              - table [ref=e614]:
+                - rowgroup [ref=e615]:
+                  - row "Value Description" [ref=e616]:
+                    - columnheader "Value" [ref=e617]
+                    - columnheader "Description" [ref=e618]
+                - rowgroup [ref=e619]:
+                  - row "public CustomList is public" [ref=e620]:
+                    - cell "public" [ref=e621]
+                    - cell "CustomList is public" [ref=e622]
+                  - row "private CustomList is private" [ref=e623]:
+                    - cell "private" [ref=e624]
+                    - cell "CustomList is private" [ref=e625]
+            - heading "# Relationship types" [level=2] [ref=e627]:
+              - link "#" [ref=e628] [cursor=pointer]:
+                - /url: "#relationship-types"
+              - text: Relationship types
+            - region "scrollable content" [ref=e633]:
+              - table [ref=e635]:
+                - rowgroup [ref=e636]:
+                  - row "Value Description" [ref=e637]:
+                    - columnheader "Value" [ref=e638]
+                    - columnheader "Description" [ref=e639]
+                - rowgroup [ref=e640]:
+                  - row "manga Manga resource" [ref=e641]:
+                    - cell "manga" [ref=e642]
+                    - cell "Manga resource" [ref=e643]
+                  - row "chapter Chapter resource" [ref=e644]:
+                    - cell "chapter" [ref=e645]
+                    - cell "Chapter resource" [ref=e646]
+                  - row "cover_art A Cover Art for a manga *" [ref=e647]:
+                    - cell "cover_art" [ref=e648]
+                    - cell "A Cover Art for a manga *" [ref=e649]:
+                      - text: A Cover Art for a manga
+                      - code [ref=e650]: "*"
+                  - row "author Author resource" [ref=e651]:
+                    - cell "author" [ref=e652]
+                    - cell "Author resource" [ref=e653]
+                  - row "artist Author resource (drawers only)" [ref=e654]:
+                    - cell "artist" [ref=e655]
+                    - cell "Author resource (drawers only)" [ref=e656]
+                  - row "scanlation_group ScanlationGroup resource" [ref=e657]:
+                    - cell "scanlation_group" [ref=e658]
+                    - cell "ScanlationGroup resource" [ref=e659]
+                  - row "tag Tag resource" [ref=e660]:
+                    - cell "tag" [ref=e661]
+                    - cell "Tag resource" [ref=e662]
+                  - row "user User resource" [ref=e663]:
+                    - cell "user" [ref=e664]
+                    - cell "User resource" [ref=e665]
+                  - row "custom_list CustomList resource" [ref=e666]:
+                    - cell "custom_list" [ref=e667]
+                    - cell "CustomList resource" [ref=e668]
+            - paragraph [ref=e669]:
+              - code [ref=e670]: "*"
+              - text: Note, that on manga resources you get only one cover_art resource relation marking the primary cover if there are more than one. By default this will be the latest volume's cover art. If you like to see all the covers for a given manga, use the cover search endpoint for your mangaId and select the one you wish to display.
+            - heading "# Manga links data" [level=2] [ref=e672]:
+              - link "#" [ref=e673] [cursor=pointer]:
+                - /url: "#manga-links-data"
+              - text: Manga links data
+            - paragraph [ref=e674]:
+              - text: In Manga attributes you have the
+              - code [ref=e675]: links
+              - text: "field that is a JSON object with some strange keys, here is how to decode this object:"
+            - region "scrollable content" [ref=e680]:
+              - table [ref=e682]:
+                - rowgroup [ref=e683]:
+                  - row "Key Related site URL URL details" [ref=e684]:
+                    - columnheader "Key" [ref=e685]
+                    - columnheader "Related site" [ref=e686]
+                    - columnheader "URL" [ref=e687]
+                    - columnheader "URL details" [ref=e688]
+                - rowgroup [ref=e689]:
+                  - 'row "al anilist https://anilist.co/manga/`{id}` Stored as id" [ref=e690]':
+                    - cell "al" [ref=e691]
+                    - cell "anilist" [ref=e692]
+                    - 'cell "https://anilist.co/manga/`{id}`" [ref=e693]':
+                      - 'link "https://anilist.co/manga/`{id}`" [ref=e694] [cursor=pointer]':
+                        - /url: https://anilist.co/manga/%60%7Bid%7D%60
+                    - cell "Stored as id" [ref=e695]
+                  - 'row "ap animeplanet https://www.anime-planet.com/manga/`{slug}` Stored as slug" [ref=e696]':
+                    - cell "ap" [ref=e697]
+                    - cell "animeplanet" [ref=e698]
+                    - 'cell "https://www.anime-planet.com/manga/`{slug}`" [ref=e699]':
+                      - 'link "https://www.anime-planet.com/manga/`{slug}`" [ref=e700] [cursor=pointer]':
+                        - /url: https://www.anime-planet.com/manga/%60%7Bslug%7D%60
+                    - cell "Stored as slug" [ref=e701]
+                  - 'row "bw bookwalker.jp https://bookwalker.jp/`{slug}` Stored as \"series/\"" [ref=e702]':
+                    - cell "bw" [ref=e703]
+                    - cell "bookwalker.jp" [ref=e704]
+                    - 'cell "https://bookwalker.jp/`{slug}`" [ref=e705]':
+                      - 'link "https://bookwalker.jp/`{slug}`" [ref=e706] [cursor=pointer]':
+                        - /url: https://bookwalker.jp/%60%7Bslug%7D%60
+                    - cell "Stored as \"series/\"" [ref=e707]
+                  - 'row "mu mangaupdates https://www.mangaupdates.com/series.html?id=`{id}` Stored as id" [ref=e708]':
+                    - cell "mu" [ref=e709]
+                    - cell "mangaupdates" [ref=e710]
+                    - 'cell "https://www.mangaupdates.com/series.html?id=`{id}`" [ref=e711]':
+                      - 'link "https://www.mangaupdates.com/series.html?id=`{id}`" [ref=e712] [cursor=pointer]':
+                        - /url: https://www.mangaupdates.com/series.html?id=%60%7Bid%7D%60
+                    - cell "Stored as id" [ref=e713]
+                  - 'row "nu novelupdates https://www.novelupdates.com/series/`{slug}` Stored as slug" [ref=e714]':
+                    - cell "nu" [ref=e715]
+                    - cell "novelupdates" [ref=e716]
+                    - 'cell "https://www.novelupdates.com/series/`{slug}`" [ref=e717]':
+                      - 'link "https://www.novelupdates.com/series/`{slug}`" [ref=e718] [cursor=pointer]':
+                        - /url: https://www.novelupdates.com/series/%60%7Bslug%7D%60
+                    - cell "Stored as slug" [ref=e719]
+                  - 'row "kt kitsu.io https://kitsu.io/api/edge/manga/`{id}` or https://kitsu.io/api/edge/manga?filter[slug]={slug} If integer, use id version of the URL, otherwise use slug one" [ref=e720]':
+                    - cell "kt" [ref=e721]
+                    - cell "kitsu.io" [ref=e722]
+                    - 'cell "https://kitsu.io/api/edge/manga/`{id}` or https://kitsu.io/api/edge/manga?filter[slug]={slug}" [ref=e723]':
+                      - 'link "https://kitsu.io/api/edge/manga/`{id}`" [ref=e724] [cursor=pointer]':
+                        - /url: https://kitsu.io/api/edge/manga/%60%7Bid%7D%60
+                      - text: or
+                      - 'link "https://kitsu.io/api/edge/manga?filter[slug]={slug}" [ref=e725] [cursor=pointer]':
+                        - /url: https://kitsu.io/api/edge/manga?filter%5Bslug%5D=%7Bslug%7D
+                    - cell "If integer, use id version of the URL, otherwise use slug one" [ref=e726]
+                  - row "amz amazon N/A Stored as full URL" [ref=e727]:
+                    - cell "amz" [ref=e728]
+                    - cell "amazon" [ref=e729]
+                    - cell "N/A" [ref=e730]
+                    - cell "Stored as full URL" [ref=e731]
+                  - row "ebj ebookjapan N/A Stored as full URL" [ref=e732]:
+                    - cell "ebj" [ref=e733]
+                    - cell "ebookjapan" [ref=e734]
+                    - cell "N/A" [ref=e735]
+                    - cell "Stored as full URL" [ref=e736]
+                  - 'row "mal myanimelist https://myanimelist.net/manga/{id} Store as id" [ref=e737]':
+                    - cell "mal" [ref=e738]
+                    - cell "myanimelist" [ref=e739]
+                    - 'cell "https://myanimelist.net/manga/{id}" [ref=e740]':
+                      - 'link "https://myanimelist.net/manga/{id}" [ref=e741] [cursor=pointer]':
+                        - /url: https://myanimelist.net/manga/%7Bid%7D
+                    - cell "Store as id" [ref=e742]
+                  - row "cdj CDJapan N/A Stored as full URL" [ref=e743]:
+                    - cell "cdj" [ref=e744]
+                    - cell "CDJapan" [ref=e745]
+                    - cell "N/A" [ref=e746]
+                    - cell "Stored as full URL" [ref=e747]
+                  - row "raw N/A N/A Stored as full URL, untranslated stuff URL (original language)" [ref=e748]:
+                    - cell "raw" [ref=e749]
+                    - cell "N/A" [ref=e750]
+                    - cell "N/A" [ref=e751]
+                    - cell "Stored as full URL, untranslated stuff URL (original language)" [ref=e752]
+                  - row "engtl N/A N/A Stored as full URL, official english licenced URL" [ref=e753]:
+                    - cell "engtl" [ref=e754]
+                    - cell "N/A" [ref=e755]
+                    - cell "N/A" [ref=e756]
+                    - cell "Stored as full URL, official english licenced URL" [ref=e757]
+            - heading "# Manga related enum" [level=2] [ref=e759]:
+              - link "#" [ref=e760] [cursor=pointer]:
+                - /url: "#manga-related-enum"
+              - text: Manga related enum
+            - paragraph [ref=e761]: This data is used in the "related" field of a Manga relationships
+            - region "scrollable content" [ref=e766]:
+              - table [ref=e768]:
+                - rowgroup [ref=e769]:
+                  - row "Value Description" [ref=e770]:
+                    - columnheader "Value" [ref=e771]
+                    - columnheader "Description" [ref=e772]
+                - rowgroup [ref=e773]:
+                  - row "monochrome A monochrome variant of this manga" [ref=e774]:
+                    - cell "monochrome" [ref=e775]
+                    - cell "A monochrome variant of this manga" [ref=e776]
+                  - row "colored A colored variant of this manga" [ref=e777]:
+                    - cell "colored" [ref=e778]
+                    - cell "A colored variant of this manga" [ref=e779]
+                  - row "preserialization The original version of this manga before its official serialization" [ref=e780]:
+                    - cell "preserialization" [ref=e781]
+                    - cell "The original version of this manga before its official serialization" [ref=e782]
+                  - row "serialization The official serialization of this manga" [ref=e783]:
+                    - cell "serialization" [ref=e784]
+                    - cell "The official serialization of this manga" [ref=e785]
+                  - row "prequel The previous entry in the same series" [ref=e786]:
+                    - cell "prequel" [ref=e787]
+                    - cell "The previous entry in the same series" [ref=e788]
+                  - row "sequel The next entry in the same series" [ref=e789]:
+                    - cell "sequel" [ref=e790]
+                    - cell "The next entry in the same series" [ref=e791]
+                  - row "main_story The original narrative this manga is based on" [ref=e792]:
+                    - cell "main_story" [ref=e793]
+                    - cell "The original narrative this manga is based on" [ref=e794]
+                  - row "side_story A side work contemporaneous with the narrative of this manga" [ref=e795]:
+                    - cell "side_story" [ref=e796]
+                    - cell "A side work contemporaneous with the narrative of this manga" [ref=e797]
+                  - row "adapted_from The original work this spin-off manga has been adapted from" [ref=e798]:
+                    - cell "adapted_from" [ref=e799]
+                    - cell "The original work this spin-off manga has been adapted from" [ref=e800]
+                  - row "spin_off An official derivative work based on this manga" [ref=e801]:
+                    - cell "spin_off" [ref=e802]
+                    - cell "An official derivative work based on this manga" [ref=e803]
+                  - row "based_on The original work this self-published derivative manga is based on" [ref=e804]:
+                    - cell "based_on" [ref=e805]
+                    - cell "The original work this self-published derivative manga is based on" [ref=e806]
+                  - row "doujinshi A self-published derivative work based on this manga" [ref=e807]:
+                    - cell "doujinshi" [ref=e808]
+                    - cell "A self-published derivative work based on this manga" [ref=e809]
+                  - row "same_franchise A manga based on the same intellectual property as this manga" [ref=e810]:
+                    - cell "same_franchise" [ref=e811]
+                    - cell "A manga based on the same intellectual property as this manga" [ref=e812]
+                  - row "shared_universe A manga taking place in the same fictional world as this manga" [ref=e813]:
+                    - cell "shared_universe" [ref=e814]
+                    - cell "A manga taking place in the same fictional world as this manga" [ref=e815]
+                  - row "alternate_story An alternative take of the story in this manga" [ref=e816]:
+                    - cell "alternate_story" [ref=e817]
+                    - cell "An alternative take of the story in this manga" [ref=e818]
+                  - row "alternate_version A different version of this manga with no other specific distinction" [ref=e819]:
+                    - cell "alternate_version" [ref=e820]
+                    - cell "A different version of this manga with no other specific distinction" [ref=e821]
+            - heading "# User roles enum" [level=2] [ref=e823]:
+              - link "#" [ref=e824] [cursor=pointer]:
+                - /url: "#user-roles-enum"
+              - text: User roles enum
+            - region "scrollable content" [ref=e829]:
+              - table [ref=e831]:
+                - rowgroup [ref=e832]:
+                  - row "Value Description" [ref=e833]:
+                    - columnheader "Value" [ref=e834]
+                    - columnheader "Description" [ref=e835]
+                - rowgroup [ref=e836]:
+                  - row "ROLE_ADMIN MangaDex admins" [ref=e837]:
+                    - cell "ROLE_ADMIN" [ref=e838]
+                    - cell "MangaDex admins" [ref=e839]
+                  - row "ROLE_BANNED Banned" [ref=e840]:
+                    - cell "ROLE_BANNED" [ref=e841]
+                    - cell "Banned" [ref=e842]
+                  - row "ROLE_CONTRIBUTOR Helpers contributing by filling in missing information (Description, External Links) on Manga pages on MangaDex" [ref=e843]:
+                    - cell "ROLE_CONTRIBUTOR" [ref=e844]
+                    - cell "Helpers contributing by filling in missing information (Description, External Links) on Manga pages on MangaDex" [ref=e845]
+                  - row "ROLE_DESIGNER Designer" [ref=e846]:
+                    - cell "ROLE_DESIGNER" [ref=e847]
+                    - cell "Designer" [ref=e848]
+                  - row "ROLE_DEVELOPER MangaDex site developers" [ref=e849]:
+                    - cell "ROLE_DEVELOPER" [ref=e850]
+                    - cell "MangaDex site developers" [ref=e851]
+                  - row "ROLE_FORUM_MODERATOR Moderates the forum" [ref=e852]:
+                    - cell "ROLE_FORUM_MODERATOR" [ref=e853]
+                    - cell "Moderates the forum" [ref=e854]
+                  - row "ROLE_GLOBAL_MODERATOR" [ref=e855]:
+                    - cell "ROLE_GLOBAL_MODERATOR" [ref=e856]
+                    - cell [ref=e857]
+                  - row "ROLE_GROUP_LEADER Leaders of active groups on MangaDex" [ref=e858]:
+                    - cell "ROLE_GROUP_LEADER" [ref=e859]
+                    - cell "Leaders of active groups on MangaDex" [ref=e860]
+                  - row "ROLE_GROUP_MEMBER Member of a group" [ref=e861]:
+                    - cell "ROLE_GROUP_MEMBER" [ref=e862]
+                    - cell "Member of a group" [ref=e863]
+                  - row "ROLE_GUEST Users viewing the site without being logged in" [ref=e864]:
+                    - cell "ROLE_GUEST" [ref=e865]
+                    - cell "Users viewing the site without being logged in" [ref=e866]
+                  - row "ROLE_MEMBER A normal account" [ref=e867]:
+                    - cell "ROLE_MEMBER" [ref=e868]
+                    - cell "A normal account" [ref=e869]
+                  - row "ROLE_MD_AT_HOME Involved with the MangaDex@Home project" [ref=e870]:
+                    - cell "ROLE_MD_AT_HOME" [ref=e871]
+                    - cell "Involved with the MangaDex@Home project" [ref=e872]:
+                      - text: Involved with the
+                      - link "MangaDex@Home" [ref=e873] [cursor=pointer]:
+                        - /url: mailto:MangaDex@Home
+                      - text: project
+                  - row "ROLE_POWER_UPLOADER Uploaded 500 or more chapters to MangaDex" [ref=e874]:
+                    - cell "ROLE_POWER_UPLOADER" [ref=e875]
+                    - cell "Uploaded 500 or more chapters to MangaDex" [ref=e876]
+                  - row "ROLE_PUBLIC_RELATIONS Manages social media" [ref=e877]:
+                    - cell "ROLE_PUBLIC_RELATIONS" [ref=e878]
+                    - cell "Manages social media" [ref=e879]
+                  - row "ROLE_STAFF Staff" [ref=e880]:
+                    - cell "ROLE_STAFF" [ref=e881]
+                    - cell "Staff" [ref=e882]
+                  - row "ROLE_UNVERIFIED Accounts that haven't had their email address verified yet" [ref=e883]:
+                    - cell "ROLE_UNVERIFIED" [ref=e884]
+                    - cell "Accounts that haven't had their email address verified yet" [ref=e885]
+                  - row "ROLE_USER A normal account" [ref=e886]:
+                    - cell "ROLE_USER" [ref=e887]
+                    - cell "A normal account" [ref=e888]
+                  - row "ROLE_VIP Important people that in one way or another helped MangaDex" [ref=e889]:
+                    - cell "ROLE_VIP" [ref=e890]
+                    - cell "Important people that in one way or another helped MangaDex" [ref=e891]
+          - generic [ref=e892]:
+            - link "Edit this page" [ref=e894] [cursor=pointer]:
+              - /url: https://gitlab.com/mangadex-pub/mangadex-api-docs/blob/main/3-enumerations.md
+              - img [ref=e895]
+              - generic [ref=e899]: Edit this page
+            - navigation [ref=e900]:
+              - link "Previous Limitations/Requirements" [ref=e902] [cursor=pointer]:
+                - /url: ../2-limitations/
+                - img [ref=e903]
+                - generic [ref=e906]:
+                  - generic [ref=e907]: Previous
+                  - generic [ref=e908]: Limitations/Requirements
+              - link "Next Concepts" [ref=e910] [cursor=pointer]:
+                - /url: ../01-concepts/
+                - generic [ref=e911]:
+                  - generic [ref=e912]: Next
+                  - generic [ref=e913]: Concepts
+                - img [ref=e914]
+        - contentinfo [ref=e918]:
+          - generic:
+            - list
+          - paragraph [ref=e920]: © Copyright 2025. All rights reserved.
+      - region "scrollable content" [ref=e926]:
+        - generic [ref=e927]:
+          - generic [ref=e928]:
+            - generic [ref=e929]: Contents
+            - button [ref=e930] [cursor=pointer]
+          - list [ref=e933]:
+            - listitem [ref=e934]:
+              - link "Language Codes & Localization" [ref=e935] [cursor=pointer]:
+                - /url: "#language-codes--localization"
+                - text: Language Codes & Localization
+            - listitem [ref=e936]:
+              - link "Manga publication demographic" [ref=e937] [cursor=pointer]:
+                - /url: "#manga-publication-demographic"
+                - text: Manga publication demographic
+            - listitem [ref=e938]:
+              - link "Manga status" [ref=e939] [cursor=pointer]:
+                - /url: "#manga-status"
+                - text: Manga status
+            - listitem [ref=e940]:
+              - link "Manga reading status" [ref=e941] [cursor=pointer]:
+                - /url: "#manga-reading-status"
+                - text: Manga reading status
+            - listitem [ref=e942]:
+              - link "Manga content rating" [ref=e943] [cursor=pointer]:
+                - /url: "#manga-content-rating"
+                - text: Manga content rating
+            - listitem [ref=e944]:
+              - link "Manga order options" [ref=e945] [cursor=pointer]:
+                - /url: "#manga-order-options"
+                - text: Manga order options
+            - listitem [ref=e946]:
+              - link "Chapter order options" [ref=e947] [cursor=pointer]:
+                - /url: "#chapter-order-options"
+                - text: Chapter order options
+            - listitem [ref=e948]:
+              - link "CustomList visibility" [ref=e949] [cursor=pointer]:
+                - /url: "#customlist-visibility"
+                - text: CustomList visibility
+            - listitem [ref=e950]:
+              - link "Relationship types" [ref=e951] [cursor=pointer]:
+                - /url: "#relationship-types"
+                - text: Relationship types
+            - listitem [ref=e952]:
+              - link "Manga links data" [ref=e953] [cursor=pointer]:
+                - /url: "#manga-links-data"
+                - text: Manga links data
+            - listitem [ref=e954]:
+              - link "Manga related enum" [ref=e955] [cursor=pointer]:
+                - /url: "#manga-related-enum"
+                - text: Manga related enum
+            - listitem [ref=e956]:
+              - link "User roles enum" [ref=e957] [cursor=pointer]:
+                - /url: "#user-roles-enum"
+                - text: User roles enum
+  - generic [ref=e960]:
+    - generic [ref=e961]:
+      - textbox "Search" [ref=e965]
+      - generic:
+        - generic:
+          - generic: Ctrl K
+    - button [ref=e966] [cursor=pointer]

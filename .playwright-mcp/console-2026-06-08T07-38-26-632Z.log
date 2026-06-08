@@ -1,0 +1,10 @@
+[    2385ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://api.mangadex.org/manga?limit=12&offset=0&tagMode=AND&order%5BlatestUploadedChapter%5D=desc&includes%5B%5D=cover_art&includes%5B%5D=author:0
+[    2386ms] [ERROR] API Error 400. Request ID: e2c646b5-a704-4a6a-8fa1-43de9e46e230 {"result":"error","errors":[{"id":"9c346772-7b14-5982-b4b6-7b5888522762","status":400,"title":"validation_exception","detail":"Error validating : The property tagMode is not defined and the definition does not allow additional properties","context":null}]} @ http://localhost:8080/js/api/client.js:116
+[    2386ms] [ERROR] Failed to load latest updates: Error: API Error 400 (Request ID: e2c646b5-a704-4a6a-8fa1-43de9e46e230)
+    at apiRequest (http://localhost:8080/js/api/client.js:118:11)
+    at async loadLatestUpdates (http://localhost:8080/js/app.js:165:22) @ http://localhost:8080/js/app.js:177
+[    3069ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://api.mangadex.org/manga?limit=8&offset=0&tagMode=AND&order%5BfollowedCount%5D=desc&includes%5B%5D=cover_art:0
+[    3070ms] [ERROR] API Error 400. Request ID: 1a6ec67e-b56e-40a8-b801-ca8af7d654b1 {"result":"error","errors":[{"id":"9c346772-7b14-5982-b4b6-7b5888522762","status":400,"title":"validation_exception","detail":"Error validating : The property tagMode is not defined and the definition does not allow additional properties","context":null}]} @ http://localhost:8080/js/api/client.js:116
+[    3070ms] [ERROR] Failed to load popular manga: Error: API Error 400 (Request ID: 1a6ec67e-b56e-40a8-b801-ca8af7d654b1)
+    at apiRequest (http://localhost:8080/js/api/client.js:118:11)
+    at async loadPopularManga (http://localhost:8080/js/app.js:188:22) @ http://localhost:8080/js/app.js:200

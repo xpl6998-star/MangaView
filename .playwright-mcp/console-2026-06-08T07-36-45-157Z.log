@@ -1,0 +1,10 @@
+[    9113ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://api.mangadex.org/manga?limit=12&offset=0&tagMode=AND&order%5BlatestUploadedChapter%5D=desc&includes=cover_art%2Cauthor:0
+[    9114ms] [ERROR] API Error 400. Request ID: 07b411ec-75ac-4225-9247-19d12666211f {"result":"error","errors":[{"id":"9c346772-7b14-5982-b4b6-7b5888522762","status":400,"title":"validation_exception","detail":"Error validating \/includes: String value found, but an array is required","context":null}]} @ http://localhost:8080/js/api/client.js:109
+[    9114ms] [ERROR] Failed to load latest updates: Error: API Error 400 (Request ID: 07b411ec-75ac-4225-9247-19d12666211f)
+    at apiRequest (http://localhost:8080/js/api/client.js:111:11)
+    at async loadLatestUpdates (http://localhost:8080/js/app.js:165:22) @ http://localhost:8080/js/app.js:177
+[    9851ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://api.mangadex.org/manga?limit=8&offset=0&tagMode=AND&order%5BfollowedCount%5D=desc&includes=cover_art:0
+[    9852ms] [ERROR] API Error 400. Request ID: 6a559325-fdad-4aec-9440-69fb2f6f7c3c {"result":"error","errors":[{"id":"9c346772-7b14-5982-b4b6-7b5888522762","status":400,"title":"validation_exception","detail":"Error validating \/includes: String value found, but an array is required","context":null}]} @ http://localhost:8080/js/api/client.js:109
+[    9852ms] [ERROR] Failed to load popular manga: Error: API Error 400 (Request ID: 6a559325-fdad-4aec-9440-69fb2f6f7c3c)
+    at apiRequest (http://localhost:8080/js/api/client.js:111:11)
+    at async loadPopularManga (http://localhost:8080/js/app.js:188:22) @ http://localhost:8080/js/app.js:200
