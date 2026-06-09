@@ -23,15 +23,15 @@
   --color-accent-light: #B5E3F5;
 
   /* Background Colors */
-  --bg-dark: #1A1A2E;
-  --bg-card: #25253A;
-  --bg-elevated: #2D2D44;
-  --bg-hover: #363650;
-  --bg-light: #F5F5F7;
+  --bg-dark: #FFFFFF;
+  --bg-card: #F5F5F7;
+  --bg-elevated: #FFFFFF;
+  --bg-hover: #EBEBEB;
+  --bg-light: #FAFAFA;
 
   /* Text Colors */
-  --text-primary: #FFFFFF;
-  --text-secondary: #B8B8C8;
+  --text-primary: #1A1A2E;
+  --text-secondary: #5A5A6A;
   --text-muted: #8888A0;
   --text-dark: #2A2A3A;
 
@@ -184,10 +184,11 @@ input, select, textarea {
   left: 0;
   right: 0;
   height: 70px;
-  background: rgba(26, 26, 46, 0.85);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(155, 123, 184, 0.2);
+  border-bottom: 1px solid rgba(155, 123, 184, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: var(--z-sticky);
   display: flex;
   align-items: center;
@@ -312,7 +313,7 @@ input, select, textarea {
 .hero__background {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-card) 50%, var(--color-secondary-dark) 100%);
+  background: linear-gradient(135deg, #FFF5F7 0%, #F0E6F5 50%, #E6F0F5 100%);
 }
 
 .hero__particles {
@@ -378,7 +379,7 @@ input, select, textarea {
   border-radius: var(--radius-full);
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--bg-dark);
+  color: #FFFFFF;
   margin-bottom: var(--space-md);
 }
 
@@ -388,10 +389,7 @@ input, select, textarea {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--space-md);
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--color-primary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 .hero__description {
@@ -408,7 +406,7 @@ input, select, textarea {
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   border-radius: var(--radius-full);
   font-weight: 600;
-  color: var(--bg-dark);
+  color: #FFFFFF;
   box-shadow: var(--shadow-glow-pink);
   transition: all var(--transition-normal);
 }
@@ -416,7 +414,7 @@ input, select, textarea {
 .hero__cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px var(--color-primary-glow);
-  color: var(--bg-dark);
+  color: #FFFFFF;
 }
 
 /* ---------- Section ---------- */
